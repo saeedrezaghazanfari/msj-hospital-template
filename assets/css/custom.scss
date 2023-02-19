@@ -1,1 +1,80 @@
 // header , footer and Shared Parts Code are Here!
+
+header {
+
+    nav {
+        
+        ul.megamenu {
+            display: flex;
+            list-style-type: none;
+            position: relative;
+            
+            li.megamenu__item {
+
+                &:hover div.megamenu__menu {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                & > a { // toggle of mega menu
+                    color: #274f7e;
+                    padding: 1rem;
+                    background-color: #ccc;
+                }
+
+                div.megamenu__menu {  // mega menu
+                    position: absolute;
+                    top: 30px;
+                    border: 1px solid black;
+                    width: auto !important;
+                    background-color: white;
+                    height: auto !important;
+                    padding: 1rem;
+                    overflow: visible;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s ease;
+
+                    .megamenu__menu_ul {
+                        display: flex;
+                        flex-direction: row;
+
+                        .megamenu__wrapper {
+                            flex: 1;
+                            margin: 10px;
+                            min-width: 190px;
+                            max-width: 200px;
+
+                            & > div {
+                                color: #274f7e;
+                                font-size: 16px;
+                                font-weight: normal;
+                                background: #f2f3f4;
+                                padding: 5px 10px !important;
+                                margin: 0;
+                                
+                                a {
+
+                                }
+                            }
+                            ul {
+                                padding: 5px;
+    
+                                li {
+                                    list-style-type: none;
+                                    padding: 5px 0;
+                                    border-bottom: 1px solid #0345bf;
+    
+                                    a {
+                                        color: #0345bf;
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
