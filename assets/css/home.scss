@@ -25,86 +25,165 @@ header {
         height: 90vh;
         width: 100%;
 
+        .container {
+            max-width: 1500px;
+            margin: auto;
+            padding: 20px 20px 0 20px;
 
-        section.top_of_menu {
-            margin-bottom: 20px;
-            color: white;
-            font-size: $font-xlarge;
-
-            // img {}
-        }
-
-        nav {
-        
-            ul.megamenu {
+            section.top_of_menu {
+                color: white;
                 display: flex;
-                list-style-type: none;
-                position: relative;
-                
-                li.megamenu__item {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                border-bottom: 2px solid white;    
     
-                    &:hover div.megamenu__menu {
-                        opacity: 1;
-                        visibility: visible;
+                .website_logo {
+
+                    a {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            height: 70px;
+                            width: 70px;
+                        }
+                        span {
+                            color: white;
+                            font-size: $font-xlarge;
+                            margin: 0 10px;
+                        }
                     }
-    
-                    & > a { // toggle of mega menu
-                        color: #274f7e;
-                        padding: 1rem;
-                        background-color: #ccc;
+                }
+                .website_option {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+
+                    .chnage_lang_div {
+                        border: 2px solid white;
+                        border-radius: 25px;
+                        padding: 5px 16px;
+                        text-align: center;
+                        margin: 0 10px;
+
+                        i {
+                            padding-left: 10px;
+                        }
                     }
-    
-                    div.megamenu__menu {  // mega menu
+
+                    ul.chnage_lang_toggle {
                         position: absolute;
-                        top: 30px;
-                        border: 1px solid black;
-                        width: auto !important;
+                        left: 72px;
+                        top: 58px;
                         background-color: white;
-                        height: auto !important;
-                        padding: 1rem;
-                        overflow: visible;
-                        opacity: 0;
-                        visibility: hidden;
-                        transition: all 0.3s ease;
+                        border-radius: 5px;
+                        list-style: none;
+                        padding: 10px;
+                        width: 100px;
+                        text-align: left;
+
+                        a {
+                            display: block;
+                        }
+                    }
+
+                    img {
+                        height: 50px;
+                        width: 60px;
+                    }
     
-                        .megamenu__menu_ul {
-                            display: flex;
-                            flex-direction: row;
+                }
+            }
     
-                            .megamenu__wrapper {
-                                flex: 1;
-                                margin: 10px;
-                                min-width: 190px;
-                                max-width: 200px;
-    
-                                & > div {
-                                    color: #274f7e;
-                                    font-size: 16px;
-                                    font-weight: normal;
-                                    background: #f2f3f4;
-                                    padding: 5px 10px !important;
-                                    margin: 0;
-                                    
-                                    // a {
-    
-                                    // }
-                                }
-                                ul {
-                                    padding: 5px;
+            nav {
+            
+                ul.megamenu {
+                    display: flex;
+                    list-style-type: none;
+                    position: relative;
+                    
+                    li.megamenu__item {
         
-                                    li {
-                                        list-style-type: none;
-                                        padding: 5px 0;
-                                        border-bottom: 1px solid #0345bf;
+                        &:hover div.megamenu__menu {
+                            opacity: 1;
+                            visibility: visible;
+                        }
         
-                                        a {
-                                            color: #0345bf;
-                                            display: block;
+                        & > a { // toggle of mega menu
+                            color: #274f7e;
+                            padding: 1rem;
+                            background-color: #ccc;
+                        }
+        
+                        div.megamenu__menu {  // mega menu
+                            position: absolute;
+                            top: 30px;
+                            border: 1px solid black;
+                            width: auto !important;
+                            background-color: white;
+                            height: auto !important;
+                            padding: 1rem;
+                            overflow: visible;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all 0.3s ease;
+        
+                            .megamenu__menu_ul {
+                                display: flex;
+                                flex-direction: row;
+        
+                                .megamenu__wrapper {
+                                    flex: 1;
+                                    margin: 10px;
+                                    min-width: 190px;
+                                    max-width: 200px;
+        
+                                    & > div {
+                                        color: #274f7e;
+                                        font-size: 16px;
+                                        font-weight: normal;
+                                        background: #f2f3f4;
+                                        padding: 5px 10px !important;
+                                        margin: 0;
+                                        
+                                        // a {
+        
+                                        // }
+                                    }
+                                    ul {
+                                        padding: 5px;
+            
+                                        li {
+                                            list-style-type: none;
+                                            padding: 5px 0;
+                                            border-bottom: 1px solid #0345bf;
+            
+                                            a {
+                                                color: #0345bf;
+                                                display: block;
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
+                    }
+                }
+            }
+
+            section.contact_ways {
+                // background-color: red;
+                position: absolute;
+                left: 220px;
+                top: 160px;
+
+                div {
+                    writing-mode: vertical-rl;
+
+                    a {
+                        color: white;
+                        font-size: $font-xlarge;
+                        padding: 15px 0;
                     }
                 }
             }

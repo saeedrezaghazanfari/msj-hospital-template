@@ -49,9 +49,20 @@ body{
 .border-none { border: none; }
 
 // btns and anchors and inputs
-a, a:not(:link) { text-decoration: none !important; cursor: pointer; }
+a, a:not(:link) { text-decoration: none !important; color: black; cursor: pointer; }
 button { border: none; font-family: vazir !important; cursor: pointer; }
 textarea, input, button, select { font-family: vazir !important; }
+.d-none {display: none !important;}
+
+// colors
+.text-pink { color: $pink !important; }
+.text-dark { color: $dark !important; }
+.text-gray { color: $gray !important; }
+.text-light { color: $light !important; }
+.bg-pink { background-color: $pink !important; }
+.bg-dark { background-color: $dark !important; }
+.bg-gray { background-color: $gray !important; }
+.bg-light { background-color: $light !important; }
 
 // fonts styles
 .font-small { font-size: $font-small; }
