@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    // home header
+    // home page - header
     var owl1 = $('.owl-carousel1');
     owl1.owlCarousel({
         loop: true,
@@ -25,7 +25,7 @@ $(document).ready(function() {
         }
     });
 
-    // home services
+    // home page - services
     var owl2 = $('.owl-carousel2');
     owl2.owlCarousel({
         loop: false,
@@ -49,7 +49,7 @@ $(document).ready(function() {
         }
     });
 
-    // blogs
+    // home page - last blogs
     var owl3 = $('.owl-carousel3');
     owl3.owlCarousel({
         loop: false,
@@ -73,7 +73,7 @@ $(document).ready(function() {
         }
     });
 
-    // insurances
+    // home page - insurances
     var owl4 = $('.owl-carousel4');
     owl4.owlCarousel({
         loop: false,
