@@ -51,7 +51,7 @@ body{
 // btns and anchors and inputs
 a, a:not(:link) { text-decoration: none !important; color: black; cursor: pointer; }
 button { border: none; font-family: vazir !important; cursor: pointer; }
-textarea, input, button, select { font-family: vazir !important; }
+textarea, input, button, select { font-family: vazir !important; outline: none; border: none; }
 .d-none {display: none !important;}
 
 // colors

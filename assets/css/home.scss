@@ -243,6 +243,137 @@ header {
 
 }
 
-// main {
+main {
+    position: relative;
 	
-// } 
+    .stethoscope_div {
+        background: url(../img/stethoscope.png) no-repeat center center / cover;
+        height: 620px;
+        width: 540px;
+        margin-top: -65px;
+        position: absolute;
+        left: 0;
+        top: -56px;
+    }
+
+    article {
+
+
+        .search__header {
+            margin-top: 4rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .line {
+                height: 3px;
+                width: 20%;
+                background-color: $dark;
+                border-radius: 25px;
+            }
+            .text {
+                font-size: $font-xlarge;
+                margin: 0 10px;
+            }
+            .link {
+                margin: 0 100px;
+                background-color: $dark;
+                border-radius: 10px;
+                padding: 5px 14px;
+
+                a {
+                    color: white;
+                    font-size: $font-small;
+
+                    i {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            margin-top: 2rem;
+
+            .search__box {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+    
+                img {
+                    height: 70px;        
+                }
+                form {
+                    display: flex;
+    
+                    .inputs_wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        padding-right: 5px;
+
+                        .inputs {
+                            position: relative;
+                            width: 177px;
+                            
+                            input {
+                                position: absolute;
+                                top: 2px;
+                                width: 140px;
+                                z-index: 3 !important;
+                                color: $pink;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                background-color: white;
+                                font-size: $font-medium;
+                            }
+                            select {
+                                position: absolute;
+                                right: 0;
+                                width: 170px;
+                                z-index: 2 !important;
+                                color: $gray;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                background-color: white;
+                                font-size: $font-medium;
+
+                            }
+                        }
+                        .selected_item {
+                            margin-top: 45px;
+                            color: $dark;
+
+                            p {
+                                padding: 0 14px;
+                            }
+                        }
+                    }
+
+                    .vertical_line {
+                        margin-top: 16px;
+                        height: 40px; 
+                        width: 2px; 
+                        border-radius: 15px;
+                        background: linear-gradient(180deg, white 0%, $pink 30%, $pink 70%, white 100%);
+                    }
+    
+                    .link {
+                        margin: 0 10px;
+        
+                        button {
+                            background-color: $dark;
+                            border-radius: 10px;
+                            padding: 5px 14px;
+                            color: white;
+                            font-size: $font-small;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+} 
