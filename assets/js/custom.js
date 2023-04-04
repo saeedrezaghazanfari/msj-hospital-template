@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    $('footer span#year_copyright').html(new Date().getFullYear());
+
     // home page - header
     var owl1 = $('.owl-carousel1');
     owl1.owlCarousel({
@@ -76,16 +78,13 @@ $(document).ready(function() {
     // home page - insurances
     var owl4 = $('.owl-carousel4');
     owl4.owlCarousel({
-        loop: false,
-        margin: 0,
+        loop: true,
+        margin: 20,
         rtl:  true,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        responsiveClass: true,
-        nav: true,
+        nav: false,
         dots: false,
         lazyLoad: true,
+        responsiveClass: true,
         responsive:{
             0: { items: 4 },
             400: { items: 4 },
@@ -94,6 +93,11 @@ $(document).ready(function() {
             1000: { items: 6 },
             1200: { items: 7 },
             1700: { items: 7 },
-        }
+        },
+        autoplay: true,
+        autoplayHoverPause: false,
+        slideTransition: 'linear',
+        autoplayTimeout: 3000,
+        autoplaySpeed: 3000,
     });
 });

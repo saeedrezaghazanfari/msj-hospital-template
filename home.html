@@ -46,7 +46,7 @@
                     <div class="website_logo">
                         <a href="/">
                             <img src="assets/img/logo-light.png" alt="website logo">
-                            <span>بیمارستان تخصصی موسی بن جعفر(ع)</span>
+                            <span class="animate__animated animate__fadeInUp wow" data-wow-delay="1.5s">بیمارستان تخصصی موسی بن جعفر(ع)</span>
                         </a>
                     </div>
                 
@@ -261,16 +261,16 @@
                 </nav>
 
                 <section class="contact_ways">
-                    <div>
+                    <div class="animate__animated animate__fadeIn wow" data-wow-delay=".4s">
                         <p><a href="">تلگرام</a></p>
                     </div>
-                    <div>
-                        <p><a href="" class="text-dark">اینستاگرام</a></p>
+                    <div class="animate__animated animate__fadeIn wow" data-wow-delay=".6s">
+                        <p><a href="" class="text-pink">اینستاگرام</a></p>
                     </div>
-                    <div>
+                    <div class="animate__animated animate__fadeIn wow" data-wow-delay=".8s">
                         <p><a href="">ایمیل</a></p>
                     </div>
-                    <div>
+                    <div class="animate__animated animate__fadeIn wow" data-wow-delay="1s">
                         <p><a href="">فکس</a></p>
                     </div>
                 </section>
@@ -317,6 +317,7 @@
                         <div class="inputs_wrapper">
                             <div class="inputs">
                                 <input type="text" placeholder="پزشک">
+                                <div class="line"></div>
                                 <select>
                                     <option value="">پزشک</option>
                                     <option value="">دکتر ناصری</option>
@@ -333,9 +334,10 @@
 
                         <div class="inputs_wrapper">
                             <div class="inputs">
-                                <input type="text" placeholder="پزشک">
+                                <input type="text" placeholder="تخصص">
+                                <div class="line"></div>
                                 <select>
-                                    <option value="">پزشک</option>
+                                    <option value="">تخصص</option>
                                     <option value="">دکتر ناصری</option>
                                     <option value="">دکتر ناصری</option>
                                     <option value="">دکتر ناصری</option>
@@ -350,9 +352,10 @@
 
                         <div class="inputs_wrapper">
                             <div class="inputs">
-                                <input type="text" placeholder="پزشک">
+                                <input type="text" placeholder="کلینیک">
+                                <div class="line"></div>
                                 <select>
-                                    <option value="">پزشک</option>
+                                    <option value="">کلینیک</option>
                                     <option value="">دکتر ناصری</option>
                                     <option value="">دکتر ناصری</option>
                                     <option value="">دکتر ناصری</option>
@@ -377,6 +380,10 @@
 
                     <div class="doctors__gallery">
 
+                        <div class="div__next">
+                            <div><i class="fa fa-chevron-right"></i></div>
+                        </div>
+
                         <div class="gallery_image gallery_image--prev" style="background-image: url(assets/img/doctor.png);">
                             <div class="gallery__info">
                                 <div class="skill">متخصص مغز و اعصاب</div>
@@ -397,6 +404,10 @@
                                 <div class="name">دکتر محسن سلامی</div>
                                 <div class="counter">4/5</div>
                             </div>
+                        </div>
+
+                        <div class="div__prev">
+                            <div><i class="fa fa-chevron-left"></i></div>
                         </div>
 
                     </div>
@@ -508,28 +519,80 @@
                     <div class="gallery__blogs owl-carousel3 owl-carousel owl-theme owl-loaded owl-drag">
     
                         <div class="gallery__item item">
-                            <div class="blog__image" style="background-image: url(assets/img/hands.png);"></div>
+                            <div class="blog__image" style="background-image: url(assets/img/hands.png);">
+                                <div class="blog__image__glass">
+                                    <div class="blog__date">
+                                        <div class="day">23</div>
+                                        <div class="month_year">
+                                            <div class="month">02</div>
+                                            <div class="year">01</div>
+                                        </div>
+                                    </div>
+                                    <div class="blog__human">
+                                        27 روز پیش
+                                    </div>
+                                </div>
+                            </div>
                             <div class="blog__header"><a href="">نوبت‌دهی بیمارستان</a></div>
                             <div class="blog__text">واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. </div>
                             <div class="blog__link"><a href="">ادامه مطلب</a></div>
                         </div>
     
                         <div class="gallery__item item">
-                            <div class="blog__image" style="background-image: url(assets/img/hands.png);"></div>
+                            <div class="blog__image" style="background-image: url(assets/img/hands.png);">
+                                <div class="blog__image__glass">
+                                    <div class="blog__date">
+                                        <div class="day">23</div>
+                                        <div class="month_year">
+                                            <div class="month">02</div>
+                                            <div class="year">01</div>
+                                        </div>
+                                    </div>
+                                    <div class="blog__human">
+                                        27 روز پیش
+                                    </div>
+                                </div>
+                            </div>
                             <div class="blog__header"><a href="">نوبت‌دهی بیمارستان</a></div>
                             <div class="blog__text">واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. </div>
                             <div class="blog__link"><a href="">ادامه مطلب</a></div>
                         </div>
     
                         <div class="gallery__item item">
-                            <div class="blog__image" style="background-image: url(assets/img/hands.png);"></div>
+                            <div class="blog__image" style="background-image: url(assets/img/hands.png);">
+                                <div class="blog__image__glass">
+                                    <div class="blog__date">
+                                        <div class="day">23</div>
+                                        <div class="month_year">
+                                            <div class="month">02</div>
+                                            <div class="year">01</div>
+                                        </div>
+                                    </div>
+                                    <div class="blog__human">
+                                        27 روز پیش
+                                    </div>
+                                </div>
+                            </div>
                             <div class="blog__header"><a href="">نوبت‌دهی بیمارستان</a></div>
                             <div class="blog__text">واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. </div>
                             <div class="blog__link"><a href="">ادامه مطلب</a></div>
                         </div>
     
                         <div class="gallery__item item">
-                            <div class="blog__image" style="background-image: url(assets/img/hands.png);"></div>
+                            <div class="blog__image" style="background-image: url(assets/img/hands.png);">
+                                <div class="blog__image__glass">
+                                    <div class="blog__date">
+                                        <div class="day">23</div>
+                                        <div class="month_year">
+                                            <div class="month">02</div>
+                                            <div class="year">01</div>
+                                        </div>
+                                    </div>
+                                    <div class="blog__human">
+                                        27 روز پیش
+                                    </div>
+                                </div>
+                            </div>
                             <div class="blog__header"><a href="">نوبت‌دهی بیمارستان</a></div>
                             <div class="blog__text">واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. </div>
                             <div class="blog__link"><a href="">ادامه مطلب</a></div>
@@ -611,18 +674,18 @@
 
             <div class="links">
                 <ul>
-                    <li><a href="">راهنمای نوبت‌دهی آنلاین</a></li>
-                    <li><a href="">تلفن‌های داخلی</a></li>
-                    <li><a href="">آموزش همگانی</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> راهنمای نوبت‌دهی آنلاین</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> تلفن‌های داخلی</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> آموزش همگانی</a></li>
                 </ul>
                 <ul>
-                    <li><a href="">گالری</a></li>
-                    <li><a href="">پزشکان</a></li>
-                    <li><a href="">مجلات و نشریات</a></li>
-                    <li><a href="">رویدادها</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> گالری</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> پزشکان</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> مجلات و نشریات</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> رویدادها</a></li>
                     <br>
-                    <li><a href="">تماس باما</a></li>
-                    <li><a href="">آدرس ما</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> تماس باما</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> آدرس ما</a></li>
                 </ul>
             </div>
 
@@ -630,15 +693,18 @@
 
         <div class="copy_text">
 
-            <div class="line"></div>
+            <p>راه‌های ارتباطی ما</p>
 
             <ul>
-                <li><a href=""><i class="fab fa-telegram"></i></a></li>
-                <li><a href="">اینستاگرام</a></li>
-                <li><a href="">ایمیل</a></li>
-                <li><a href="">فکس</a></li>
+                <li class="telegram_icon animate__animated animate__fadeInRight wow" data-wow-delay=".3s"><a href=""><i class="fab fa-telegram"></i></a></li>
+                <li class="instagram_icon animate__animated animate__fadeInRight wow" data-wow-delay=".6s"><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li class="envelope_icon animate__animated animate__fadeInLeft wow" data-wow-delay=".6s"><a href=""><i class="fa fa-envelope"></i></a></li>
+                <li class="fax_icon animate__animated animate__fadeInLeft wow" data-wow-delay=".3s"><a href=""><i class="fa fa-fax"></i></a></li>
             </ul>
-            <p>تمامی حقوق این سایت مال موسی است.</p>
+
+            <div class="line"></div>
+
+            <p>&#169; <span id="year_copyright"></span> - بیمارستان موسی بن جعفر(ع)</p>
         </div>
 
     </footer>
