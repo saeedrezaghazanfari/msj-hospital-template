@@ -1,4 +1,6 @@
+
 @import 'config/variables';
+@import 'config/animations';
 
 // header and main tag are here !!
 
@@ -82,9 +84,17 @@ header {
                         border-radius: 5px;
                         list-style: none;
                         padding: 10px;
-                        width: 100px;
+                        width: 68px;
                         text-align: left;
                         z-index: 10;
+                        opacity: 0;
+                        visibility: none;
+                        transition: opacity .3s ease;
+
+                        &--show {
+                            opacity: 1;
+                            visibility: visible;
+                        }
 
                         li {
 
@@ -105,6 +115,7 @@ header {
                     form.search_bar {
 
                         .form_wrapper {
+                            display: none;
                             position: relative;
                             border-radius: 25px 0 0 25px;
                             margin-right: 24px;
@@ -116,7 +127,8 @@ header {
                                 padding: 9px 16px;
                                 text-align: right;
                                 border-right: unset;
-                                background-color: rgba(#ccc, .6);
+                                background-color: white;
+                                color: $dark;
                             }
                             button {
                                 position: absolute;
@@ -129,10 +141,10 @@ header {
                                 padding-left: 0;
                                 text-align: right;
                                 border-left: unset;
-                                background-color: rgba(#ccc, .6);
+                                background-color: white;
 
                                 i {
-                                    color: white;
+                                    color: $dark;
                                 }
                             }
                         }
@@ -337,7 +349,40 @@ main {
     }
 
     article {
+        position: relative;
 
+        .corner__image {
+            position: absolute;
+            z-index: -10;
+
+            &--1 {
+                background-color: rgba($color: $pink, $alpha: .4);
+                border-radius: 58% 42% 39% 61% / 57% 38% 62% 43%;
+                top: 17rem;
+                right: -40px;
+                height: 250px;
+                width: 250px;
+                animation: rotation-h 25s linear infinite;
+            }
+            &--2 {
+                background-color: rgba($color: $pink, $alpha: .2);
+                border-radius: 58% 42% 39% 61% / 57% 38% 62% 43%;
+                top: 48rem;
+                left: 120px;
+                height: 300px;
+                width: 300px;
+                animation: rotation-ah 25s linear infinite;
+            }
+            &--3 {
+                background-color: rgba($color: $pink, $alpha: .3);
+                border-radius: 58% 42% 39% 61% / 57% 38% 62% 43%;
+                bottom: 21rem;
+                right: -44px;            
+                height: 370px;
+                width: 370px;
+                animation: rotation-h 25s linear infinite;
+            }
+        }
 
         .search__header {
             margin-top: 4rem;
@@ -360,6 +405,7 @@ main {
                 background-color: $dark;
                 border-radius: 10px;
                 padding: 5px 14px;
+                transition: all .3s ease;
 
                 a {
                     display: block;
@@ -369,6 +415,10 @@ main {
                     i {
                         transform: rotate(-180deg);
                     }
+                }
+
+                &:hover {
+                    transform: translateY(-1.5px);
                 }
             }
         }
@@ -468,13 +518,18 @@ main {
                     .link {
                         margin: 0 10px;
                         margin-top: 10px;
-
+                        
                         button {
                             background-color: $dark;
                             border-radius: 10px;
                             padding: 5px 14px;
                             color: white;
                             font-size: $font-small;
+                            transition: all .3s ease;
+                            
+                            &:hover {
+                                transform: translateY(-1.5px);
+                            }
                         }
                     }
                 }
@@ -538,7 +593,7 @@ main {
 
                         &--prev {
                             z-index: 2;
-                            margin-left: -120px;
+                            margin-right: -120px;
                             opacity: 0.6;
                             height: 385px;
                             width: 245px;
@@ -550,7 +605,7 @@ main {
                         }
                         &--next {
                             z-index: 2;
-                            margin-right: -120px;
+                            margin-left: -120px;
                             opacity: 0.6;
                             height: 385px;
                             width: 245px;
@@ -572,6 +627,10 @@ main {
                         border-radius: 50%;
                         color: white;
                         margin-left: 20px;
+                    }
+                    .disabled {
+                        pointer-events: none;
+                        background-color: #ffe2e3 !important;
                     }
                 }
             }
@@ -775,6 +834,13 @@ main {
                             visibility: visible;
                             width: 130px;
                         }
+                        &:hover .blog__link {
+                            bottom: 8px;
+
+                            a {
+                                padding-bottom: 8px;
+                            }
+                        }
     
                         .blog__image {
                             background-size: cover; 
@@ -855,16 +921,20 @@ main {
                             text-align: justify;
                         }
                         .blog__link {
+                            position: absolute;
+                            bottom: 5px;
+                            left: 20px;
                             padding: 10px;
                             text-align: left;
-                            padding-bottom: 15px;
-    
+                            transition: all .3s ease;
+
                             a {
                                 color: white;
                                 background-color: $dark;
-                                border-radius: 25px;
+                                border-radius: 25px 25px 0 0;
                                 padding: 5px 20px;
                                 font-size: $font-small;
+                                transition: all .3s ease;
                             }
                         }
                     }
@@ -1003,6 +1073,8 @@ main {
                     }
                 }
             }
+            
+
         }
     }
 

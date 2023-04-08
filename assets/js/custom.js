@@ -101,3 +101,134 @@ $(document).ready(function() {
         autoplaySpeed: 3000,
     });
 });
+
+
+document.querySelector('.header__elements .chnage_lang_div').addEventListener('click', () => {
+    document.querySelector('.header__elements .chnage_lang_toggle').classList.toggle('chnage_lang_toggle--show');
+});
+
+
+document.querySelector('.website_option .image_search').addEventListener('click', () => {
+    if(document.querySelector('.header__elements .chnage_lang_div').style.display != 'none') {
+        $('.header__elements .chnage_lang_div').fadeOut();
+        document.querySelector('.header__elements .chnage_lang_toggle').classList.remove('chnage_lang_toggle--show');
+
+        setTimeout(() => {
+            $('.website_option .form_wrapper').fadeIn();
+        }, 400);
+    }
+    else if (document.querySelector('.header__elements .chnage_lang_div').style.display == 'none') {
+        $('.website_option .form_wrapper input').val('');
+        $('.website_option .form_wrapper').fadeOut();
+        setTimeout(() => {
+            $('.header__elements .chnage_lang_div').fadeIn();
+        }, 400);
+    }
+});
+
+
+
+
+
+
+
+
+let gallery_marker = 1;
+let response_data = [
+    {name: 'سعیدرضا1 غضنفری', doctor_image: 'url(assets/img/doctor.png)', slug: '', skill: '111'},
+    {name: 'سعیدرضا 2غضنفری', doctor_image: 'url(assets/img/hands.png)', slug: '', skill: '222'},
+    {name: 'سعیدرضا غ3ضنفری', doctor_image: 'url(assets/img/line.png)', slug: '', skill: '33'},
+    {name: 'سعیدرضا غض4نفری', doctor_image: 'url(assets/img/search.png)', slug: '', skill: '4'},
+    {name: 'سعیدرضا غضن5فری', doctor_image: 'url(assets/img/doctor.png)', slug: '', skill: '511'},
+    {name: 'سعیدرضا غضنف6ری', doctor_image: 'url(assets/img/hands.png)', slug: '', skill: '611'},
+    {name: 'سعیدرضا غضنفر7ی', doctor_image: 'url(assets/img/line.png)', slug: '', skill: '711'},
+    {name: 'سعیدرضا غضنفری8', doctor_image: 'url(assets/img/search.png)', slug: '', skill: '811'},
+    {name: 'سعیدرضا غضنفر9ی', doctor_image: 'url(assets/img/line.png)', slug: '', skill: '911'},
+];
+
+$('.doctors__wrapper .doctors__gallery .gallery_image--prev').css({'background-image': response_data[0].doctor_image});
+$('.doctors__wrapper .doctors__gallery .gallery_image--center').css({'background-image': response_data[1].doctor_image});
+$('.doctors__wrapper .doctors__gallery .gallery_image--center .skill').text(response_data[1].skill);
+$('.doctors__wrapper .doctors__gallery .gallery_image--center .name').text(response_data[1].name);
+$('.doctors__wrapper .doctors__gallery .gallery_image--center .counter').text(`${gallery_marker + 1}/9`);
+$('.gallery__more #doctor_hours_link').attr('href', 'aaa----------aaa');
+$('.gallery__more #doctor_info_link').attr('href', 'aaa----------aaa');
+$('.doctors__wrapper .doctors__gallery .gallery_image--next').css({'background-image': response_data[2].doctor_image});
+
+function check_marker() {
+    if(gallery_marker == 0) {
+        document.querySelector('.doctors__wrapper .doctors__gallery .div__prev').classList.add('disabled');
+        document.querySelector('.doctors__wrapper .doctors__gallery .gallery_image--prev').style.visibility = 'none';
+        document.querySelector('.doctors__wrapper .doctors__gallery .gallery_image--prev').style.opacity = '0';
+    }
+    else if(gallery_marker == 8) {
+        document.querySelector('.doctors__wrapper .doctors__gallery .div__next').classList.add('disabled');
+        document.querySelector('.doctors__wrapper .doctors__gallery .gallery_image--next').style.visibility = 'none';
+        document.querySelector('.doctors__wrapper .doctors__gallery .gallery_image--next').style.opacity = '0';
+    }
+    else {
+        document.querySelector('.doctors__wrapper .doctors__gallery .div__next').classList.remove('disabled');
+        document.querySelector('.doctors__wrapper .doctors__gallery .div__prev').classList.remove('disabled');
+        document.querySelector('.doctors__wrapper .doctors__gallery .gallery_image--prev').style.visibility = 'visible';
+        document.querySelector('.doctors__wrapper .doctors__gallery .gallery_image--prev').style.opacity = '.6';
+        document.querySelector('.doctors__wrapper .doctors__gallery .gallery_image--next').style.visibility = 'visible';
+        document.querySelector('.doctors__wrapper .doctors__gallery .gallery_image--next').style.opacity = '.6';
+    }
+}
+
+function next_clicked() {
+    gallery_marker += 1;
+    if(gallery_marker == 10) return;
+    let gallery_marker_prev = gallery_marker - 1;
+    let gallery_marker_next = gallery_marker + 1;
+    check_marker();
+
+    $('.doctors__wrapper .doctors__gallery .gallery_image--center').fadeOut();
+    setTimeout(() => {
+        $('.doctors__wrapper .doctors__gallery .gallery_image--center').css({'background-image': response_data[gallery_marker].doctor_image});
+        $('.doctors__wrapper .doctors__gallery .gallery_image--center .skill').text(response_data[gallery_marker].skill);
+        $('.doctors__wrapper .doctors__gallery .gallery_image--center .name').text(response_data[gallery_marker].name);
+        $('.gallery__more #doctor_hours_link').attr('href', 'aaa----------aaa');
+        $('.gallery__more #doctor_info_link').attr('href', 'aaa----------aaa');
+        $('.doctors__wrapper .doctors__gallery .gallery_image--center .counter').text(`${gallery_marker + 1}/9`);
+    }, 500)
+    $('.doctors__wrapper .doctors__gallery .gallery_image--center').fadeIn();
+
+    if(gallery_marker > 0) {
+        $('.doctors__wrapper .doctors__gallery .gallery_image--prev').css({'background-image': response_data[gallery_marker_prev].doctor_image});
+    }
+    if(gallery_marker < 8) {
+        $('.doctors__wrapper .doctors__gallery .gallery_image--next').css({'background-image': response_data[gallery_marker_next].doctor_image});
+    }
+}
+
+function prev_clicked() {
+    gallery_marker -= 1;
+    if(gallery_marker == -1) return;
+    let gallery_marker_prev = gallery_marker - 1;
+    let gallery_marker_next = gallery_marker + 1;
+    check_marker();
+
+    $('.doctors__wrapper .doctors__gallery .gallery_image--center').fadeOut();
+    setTimeout(() => {
+        $('.doctors__wrapper .doctors__gallery .gallery_image--center').css({'background-image': response_data[gallery_marker].doctor_image});
+        $('.doctors__wrapper .doctors__gallery .gallery_image--center .skill').text(response_data[gallery_marker].skill);
+        $('.doctors__wrapper .doctors__gallery .gallery_image--center .name').text(response_data[gallery_marker].name);
+        $('.gallery__more #doctor_hours_link').attr('href', 'aaa----------aaa');
+        $('.gallery__more #doctor_info_link').attr('href', 'aaa----------aaa');
+        $('.doctors__wrapper .doctors__gallery .gallery_image--center .counter').text(`${gallery_marker + 1}/9`);
+    }, 500)
+    $('.doctors__wrapper .doctors__gallery .gallery_image--center').fadeIn();
+
+    if(gallery_marker > 0) {
+        $('.doctors__wrapper .doctors__gallery .gallery_image--prev').css({'background-image': response_data[gallery_marker_prev].doctor_image});
+    }
+    if(gallery_marker < 8) {
+        $('.doctors__wrapper .doctors__gallery .gallery_image--next').css({'background-image': response_data[gallery_marker_next].doctor_image});
+    }
+}
+
+document.querySelector('.doctors__wrapper .doctors__gallery .div__next').addEventListener('click', next_clicked);
+document.querySelector('.doctors__wrapper .doctors__gallery .div__prev').addEventListener('click', prev_clicked);
+document.querySelector('.doctors__wrapper .doctors__gallery .gallery_image--prev').addEventListener('click', prev_clicked);
+document.querySelector('.doctors__wrapper .doctors__gallery .gallery_image--next').addEventListener('click', next_clicked);

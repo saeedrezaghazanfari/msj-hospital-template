@@ -53,19 +53,19 @@
                     <div class="website_option">
 
                         <div class="chnage_lang_div"><i class="fas fa-chevron-down pt-1-2"></i> فا</div>
-                        <ul class="chnage_lang_toggle d-none">
+                        <ul class="chnage_lang_toggle">
                             <li><a href="#">En</a></li>
                             <li><a href="#">Ar</a></li>
                             <li><a href="#">Ru</a></li>
                         </ul>
 
-                        <form action="" method="GET" class="search_bar d-none">
+                        <form action="" method="GET" class="search_bar">
                             <div class="form_wrapper">
                                 <input type="text" placeholder="جستجو کنید:">
                                 <button type="submit"><i class="fa fa-search"></i></button>
                             </div>
                         </form>
-                        <img class="image_search" src="assets/img/search.png" alt="">
+                        <img class="image_search" src="assets/img/search.png" alt="search icon">
 
                     </div>
     
@@ -301,6 +301,10 @@
 
         <article>
 
+            <div class="corner__image corner__image--1"></div>
+            <div class="corner__image corner__image--2"></div>
+            <div class="corner__image corner__image--3"></div>
+
             <div class="search__header">
                 <div class="line"></div>
                 <div class="text">جستجو در بیمارستان</div>
@@ -384,25 +388,25 @@
                             <div><i class="fa fa-chevron-right"></i></div>
                         </div>
 
-                        <div class="gallery_image gallery_image--prev" style="background-image: url(assets/img/doctor.png);">
+                        <div class="gallery_image gallery_image--next" style="background-image: url(assets/img/doctor.png);">
                             <div class="gallery__info">
                                 <div class="skill">متخصص مغز و اعصاب</div>
                                 <div class="name">دکتر محسن سلامی</div>
-                                <div class="counter">4/5</div>
+                                <div class="counter">4/9</div>
                             </div>
                         </div>
                         <div class="gallery_image gallery_image--center" style="background-image: url(assets/img/doctor.png);">
                             <div class="gallery__info">
                                 <div class="skill">متخصص مغز و اعصاب</div>
                                 <div class="name">دکتر محسن سلامی</div>
-                                <div class="counter">4/5</div>
+                                <div class="counter">4/9</div>
                             </div>
                         </div>
-                        <div class="gallery_image gallery_image--next" style="background-image: url(assets/img/doctor.png);">
+                        <div class="gallery_image gallery_image--prev" style="background-image: url(assets/img/doctor.png);">
                             <div class="gallery__info">
                                 <div class="skill">متخصص مغز و اعصاب</div>
                                 <div class="name">دکتر محسن سلامی</div>
-                                <div class="counter">4/5</div>
+                                <div class="counter">4/9</div>
                             </div>
                         </div>
 
@@ -416,12 +420,12 @@
                         <div class="reservation">
                             <div class="line"></div>
                             <div>
-                                <a href="">ساعات حضور</a>
+                                <a id="doctor_hours_link" href="">ساعات حضور</a>
                             </div>
                         </div>
                         <div class="more_info">
                             <div>
-                                <a href="">اطلاعات بیشتر</a>
+                                <a id="doctor_info_link" href="">اطلاعات بیشتر</a>
                             </div>
                             <div class="line"></div>
                         </div>
@@ -704,7 +708,7 @@
 
             <div class="line"></div>
 
-            <p>&#169; <span id="year_copyright"></span> - بیمارستان موسی بن جعفر(ع)</p>
+            <p>&#169; <span id="year_copyright"></span> - بیمارستان تخصصی موسی بن جعفر(ع)</p>
         </div>
 
     </footer>
