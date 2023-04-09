@@ -1,7 +1,140 @@
 
 @import 'config/variables';
 
-// footer and Shared Parts Code are Here!
+// navbar - footer and Shared Parts Code are Here!
+
+section#megamenu__navbar {
+    border-bottom: 2px solid $light;
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 20px !important;
+    background-color: white;
+    z-index: 100;
+    display: none;
+    flex-direction: row;
+    list-style-type: none;
+
+    li.bars_div {
+        text-align: left;
+        padding: 0 10px;
+        display: none;
+
+        a {
+            color: $dark;
+        }
+        button {
+            color: $dark;
+            font-size: 14pt;
+            background-color: white;
+            padding: 0 20px;
+        }
+    }
+    li.megamenu__item {
+
+        &:hover div.megamenu__menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0px) !important;
+        }
+
+        & > a { // toggle of mega menu
+            color: $dark;
+            padding: 1rem;
+            background-color: transparent;
+            font-size: $font-medium;
+        }
+
+        div.megamenu__menu {  // mega menu
+            position: absolute;
+            top: 67px;
+            border-radius: 5px;
+            width: auto !important;
+            background-color: white;
+            z-index: 4;
+            height: auto !important;
+            padding: 7px;
+            overflow: visible;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: row;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-7px);
+            border-top: 1px solid white;
+            border-left: 1px solid $light;
+            border-right: 1px solid $light;
+            border-bottom: 1px solid $light;
+
+            &::before {
+                content: '';
+                display: none;
+            }                    
+
+            .megamenu__menu_ul {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+                .megamenu__wrapper {
+                    flex: 1;
+                    margin: 6px;
+                    min-width: 190px;
+                    max-width: 200px;
+
+                    & > div {
+                        color: $dark;
+                        font-size: 14px;
+                        font-weight: normal;
+                        background: #f2f3f4;
+                        padding: 5px 10px !important;
+                        margin: 0;
+
+                        a {
+                            transition: all .3s ease;
+                            display: block;
+                        }
+
+                        &:hover {
+                            a {color: $pink;}
+                        }
+                    }
+                    ul {
+                        padding: 5px;
+
+                        li {
+                            list-style-type: none;
+                            padding: 5px 0;
+                            border-bottom: 1px solid #f2f3f4;
+
+                            a {
+                                color: $dark;
+                                display: block;
+                                transition: all .3s ease;
+                                
+                                .fa-chevron-left {
+                                    font-size: 8px;
+                                    padding: 0 3px;
+                                    color: #c5c5c5;
+                                    transition: all .3s ease;
+                                }
+
+                                &:hover {
+                                    color: $pink;
+
+                                    .fa-chevron-left {
+                                        transform: translateX(-2px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 footer {
     margin-top: 100px;
@@ -11,7 +144,7 @@ footer {
     position: relative;
 
     .logo__wrapper {
-        max-width: 200px;
+        max-width: 100px;
         margin: auto;
         position: absolute;
         top: -60px;
@@ -37,20 +170,23 @@ footer {
         margin: auto;
 
         .title {
-
+            margin-top: 50px;
             img {
                 min-width: 200px;
-                max-width: 300px;
+                max-width: 240px;
             }
         }
         .links {
             display: flex;
             flex-direction: row;
             margin-top: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
 
             ul {
-                margin-right: 100px;
+                margin: 10px;
                 list-style: none;
+                margin-bottom: 50px;
 
                 li {
                     margin-bottom: 6px;
@@ -95,12 +231,13 @@ footer {
             margin-top: 10px;
             list-style: none;
             display: flex;
+            flex-wrap: wrap;
             flex-direction: row;
             justify-content: center;
             margin-bottom: 30px;
 
             li {
-                margin: 0 7px;
+                margin: 5px 7px;
                 padding: 5px 11px 1px 11px;
                 border: 3px solid white;
                 border-radius: 13px;
@@ -146,6 +283,35 @@ footer {
             padding: 14px;
             font-size: $font-small;
             color: $light;
+        }
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    footer .line {
+        width: 80% !important;
+    }
+    footer .elements {
+        justify-content: center !important;
+    }
+    .copy_text p {
+        font-size: $font-very-small !important;
+    }
+    .logo__wrapper {
+        right: 36.5% !important;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    section#megamenu__navbar {
+        li.bars_div {
+            display: block !important;
+        }
+        li.megamenu__item {
+            display: none !important;
         }
     }
 }

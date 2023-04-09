@@ -30,7 +30,7 @@ $(document).ready(function() {
     // home page - services
     var owl2 = $('.owl-carousel2');
     owl2.owlCarousel({
-        loop: false,
+        loop: true,
         margin: 0,
         rtl:  true,
         autoplay: true,
@@ -42,9 +42,9 @@ $(document).ready(function() {
         lazyLoad: true,
         responsive:{    
             0: { items: 1 },
-            400: { items: 2 },
-            700: { items: 3 },
-            800: { items: 5 },
+            400: { items: 2},
+            600: { items: 3},
+            700: { items: 4 },
             1000: { items: 5 },
             1200: { items: 5 },
             1700: { items: 5 },
@@ -55,7 +55,7 @@ $(document).ready(function() {
     var owl3 = $('.owl-carousel3');
     owl3.owlCarousel({
         loop: false,
-        margin: 0,
+        margin: 5,
         rtl:  true,
         autoplay: true,
         autoplayTimeout: 4000,
@@ -66,9 +66,9 @@ $(document).ready(function() {
         lazyLoad: true,
         responsive:{
             0: { items: 1 },
-            400: { items: 2 },
-            700: { items: 2 },
-            800: { items: 3 },
+            400: { items: 1 },
+            600: { items: 2 },
+            900: { items: 3 },
             1000: { items: 3 },
             1200: { items: 3 },
             1700: { items: 3 },
@@ -86,9 +86,9 @@ $(document).ready(function() {
         lazyLoad: true,
         responsiveClass: true,
         responsive:{
-            0: { items: 4 },
-            400: { items: 4 },
-            700: { items: 5 },
+            0: { items: 2 },
+            400: { items: 3 },
+            700: { items: 4 },
             800: { items: 5 },
             1000: { items: 6 },
             1200: { items: 7 },
@@ -135,11 +135,11 @@ document.querySelector('.website_option .image_search').addEventListener('click'
 
 let gallery_marker = 1;
 let response_data = [
-    {name: 'سعیدرضا1 غضنفری', doctor_image: 'url(assets/img/doctor.png)', slug: '', skill: '111'},
+    {name: 'سعیدرضا1 غضنفری', doctor_image: 'url(assets/img/_doctor.png)', slug: '', skill: '111'},
     {name: 'سعیدرضا 2غضنفری', doctor_image: 'url(assets/img/hands.png)', slug: '', skill: '222'},
     {name: 'سعیدرضا غ3ضنفری', doctor_image: 'url(assets/img/line.png)', slug: '', skill: '33'},
     {name: 'سعیدرضا غض4نفری', doctor_image: 'url(assets/img/search.png)', slug: '', skill: '4'},
-    {name: 'سعیدرضا غضن5فری', doctor_image: 'url(assets/img/doctor.png)', slug: '', skill: '511'},
+    {name: 'سعیدرضا غضن5فری', doctor_image: 'url(assets/img/_doctor.png)', slug: '', skill: '511'},
     {name: 'سعیدرضا غضنف6ری', doctor_image: 'url(assets/img/hands.png)', slug: '', skill: '611'},
     {name: 'سعیدرضا غضنفر7ی', doctor_image: 'url(assets/img/line.png)', slug: '', skill: '711'},
     {name: 'سعیدرضا غضنفری8', doctor_image: 'url(assets/img/search.png)', slug: '', skill: '811'},
@@ -232,3 +232,53 @@ document.querySelector('.doctors__wrapper .doctors__gallery .div__next').addEven
 document.querySelector('.doctors__wrapper .doctors__gallery .div__prev').addEventListener('click', prev_clicked);
 document.querySelector('.doctors__wrapper .doctors__gallery .gallery_image--prev').addEventListener('click', prev_clicked);
 document.querySelector('.doctors__wrapper .doctors__gallery .gallery_image--next').addEventListener('click', next_clicked);
+
+
+function open_sidebar() {
+    document.querySelector('nav .sidebar_wrapper').style.display = 'block';
+    document.querySelector('.sidebar_wrapper ul.sidebar_megamenu').style.display = 'flex';
+    setTimeout(() => {
+        document.querySelector('.sidebar_wrapper ul.sidebar_megamenu').style.transform = 'translateX(0px)';
+    }, 300);
+}
+// open manubar
+document.querySelector('nav .sidebar_toggle_div .sidebar_toggle_btn').addEventListener('click', open_sidebar);
+document.querySelector('section#megamenu__navbar .bars_div').addEventListener('click', open_sidebar);
+
+// close menubar
+document.querySelector('.sidebar_megamenu .close_div button').addEventListener('click', () => {
+    document.querySelector('.sidebar_wrapper ul.sidebar_megamenu').style.transform = 'translateX(250px)';    
+    setTimeout(() => {
+        document.querySelector('.sidebar_wrapper ul.sidebar_megamenu').style.display = 'none';
+        document.querySelector('nav .sidebar_wrapper').style.display = 'none';
+    }, 300);
+});
+
+function toggle_ulbox(ulbox, itag) {
+
+    if (document.querySelector(`.megamenu__item #${ulbox}`).style.display == 'block'){
+        $(`.megamenu__item #${ulbox}`).slideUp();
+        document.getElementById(itag).classList.remove('chevron_active')
+    }
+    else {
+        $(`.megamenu__item #${ulbox}`).slideDown();
+        document.getElementById(itag).classList.add('chevron_active')
+    }
+}
+
+
+
+
+
+// scroll events
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+
+    if (currentScrollPos < 250) {
+        document.getElementById("megamenu__navbar").style.display = 'none';
+    } else {
+        document.getElementById("megamenu__navbar").style.display = 'flex';
+
+    }
+}

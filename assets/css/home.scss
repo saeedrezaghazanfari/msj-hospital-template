@@ -42,6 +42,7 @@ header {
                 border-bottom: 2px solid white;    
     
                 .website_logo {
+                    min-width: 300px;
 
                     a {
                         display: flex;
@@ -155,11 +156,187 @@ header {
             nav {
                 margin-top: 20px;
 
+                .sidebar_toggle_div {
+                    display: none;
+
+                    button.sidebar_toggle_btn {
+                        background-color: transparent;
+                        color: white;
+                        padding: 5px 24px;
+
+                        i {
+                            font-size: $font-xlarge;
+                        }
+                    }
+                }
+                .sidebar_wrapper {
+                    display: none;
+
+                    .sidebar_glass {
+                        position: fixed;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        background-color: rgba($color: black, $alpha: .4);
+                        backdrop-filter: blur(4px);
+                        z-index: 101;
+
+                        ul.sidebar_megamenu {
+                            width: 230px;
+                            height: 100vh;
+                            overflow-y: auto;
+                            background-color: white;
+                            display: none;
+                            flex-direction: column;
+                            list-style-type: none;
+                            position: relative;
+                            transition: all .3s ease;
+                            transform: translateX(250px);
+
+                            li.close_div {
+                                text-align: left;
+                                padding: 0 10px;
+
+                                button {
+                                    color: $dark;
+                                    font-size: 28pt;
+                                    background-color: white;
+                                    padding: 0 10px;
+                                }
+                            }
+                            
+                            li.megamenu__item {
+                                margin-bottom: 7px;
+                
+                                & > a { // toggle of mega menu
+                                    color: $dark;
+                                    padding: 1rem;
+                                    background-color: transparent;
+                                    font-size: $font-small;
+
+                                    .fa-chevron-left {
+                                        font-size: 8px;
+                                        padding: 0 3px;
+                                        color: #c5c5c5;
+                                        transition: all .3s ease;
+                                    }
+                                    .chevron_active {
+                                        color: black;
+                                        transform: rotate(270deg);
+                                    }
+                                    &:hover {
+                                        .fa-chevron-left {
+                                            transform: translateX(-2px);
+                                        }
+                                    }
+                                }
+                                .px1 {
+                                    padding: 0 17px;
+                                }
+
+                                div.megamenu__menu {  // mega menu
+                                    border-radius: 5px;
+                                    padding: 7px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    display: none;
+                                    
+                                    .megamenu__menu_ul {
+                                        display: flex;
+                                        flex-direction: column;
+                                        height: 100%;
+                
+                                        .megamenu__wrapper {
+                                            flex: 1;
+                                            margin: 6px;
+                                            min-width: 190px;
+                                            max-width: 200px;
+                
+                                            & > div {
+                                                color: $dark;
+                                                font-size: $font-small;
+                                                font-weight: normal;
+                                                padding: 0px 17px 5px 0px;
+                                                margin: 0;
+        
+                                                a {
+                                                    transition: all .3s ease;
+                                                    display: block;
+                                                    color: $dark;
+                                                    padding: 0;
+
+                                                    .fa-chevron-left {
+                                                        font-size: 8px;
+                                                        padding: 0 3px;
+                                                        color: #c5c5c5;
+                                                        transition: all .3s ease;
+                                                    }
+                                                    .chevron_active {
+                                                        color: black;
+                                                        transform: rotate(270deg);
+                                                    }
+                                                }
+        
+                                                &:hover {
+                                                    a {color: $pink;}
+                                                    .fa-chevron-left {
+                                                        transform: translateX(-2px);
+                                                    }
+                                                }
+                                            }
+                                            ul {
+                                                padding: 0px 17px 5px 5px;
+                    
+                                                li {
+                                                    list-style-type: none;
+                                                    padding: 5px 0;
+                                                    border-bottom: 1px solid #f2f3f4;
+                    
+                                                    a {
+                                                        color: $dark;
+                                                        display: block;
+                                                        transition: all .3s ease;
+                                                        font-size: 10pt;
+        
+                                                        &:hover {
+                                                            color: $pink;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .px2 {
+                                                padding: 0 30px 0 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
                 ul.megamenu {
                     display: flex;
                     list-style-type: none;
                     position: relative;
-                    
+
+                    li.bars_div {
+                        text-align: left;
+                        padding: 0 10px;
+                        display: none;
+
+                        a {
+                            color: $dark;
+                        }
+                        button {
+                            color: $dark;
+                            font-size: 14pt;
+                            background-color: white;
+                            padding: 0 20px;
+                        }
+                    }
                     li.megamenu__item {
         
                         &:hover div.megamenu__menu {
@@ -289,7 +466,7 @@ header {
                         }
                     }
                 }
-                .text-pink { color: #ffa2ff !important; }
+                .text-pink { color: #ffa2ff; }
                 div:nth-child(1) p { top: 0px; transform: rotate(-90deg) translate(0px, 26px); }
                 div:nth-child(2) p { top: 130px; transform: rotate(-90deg) translate(0px, 5px);}
                 div:nth-child(3) p { top: 260px; transform: rotate(-90deg) translate(0px, 28px);}
@@ -387,6 +564,7 @@ main {
         .search__header {
             margin-top: 4rem;
             display: flex;
+            flex-wrap: wrap;
             flex-direction: row;
             align-items: center;
 
@@ -448,7 +626,7 @@ main {
                         .inputs {
                             position: relative;
                             width: 177px;
-                            
+                                                        
                             input {
                                 position: absolute;
                                 top: 1px;
@@ -646,7 +824,7 @@ main {
 
                     .line {
                         height: 5px;
-                        width: 160px;
+                        width: 120px;
                         background: url(../img/line.png) no-repeat center center /cover;
                     }
                     div {
@@ -668,7 +846,7 @@ main {
 
                     .line {
                         height: 5px;
-                        width: 160px;
+                        width: 120px;
                         background: url(../img/line-ltr.png) no-repeat center center /cover;
                     }
                     div {
@@ -696,6 +874,7 @@ main {
                 .one_element {
                     margin: 0 20px;
                     text-align: center;
+                    margin-bottom: 25px;
 
                     img {
                         height: 160px;
@@ -765,8 +944,8 @@ main {
 
                         img {
                             border-radius: 50%;
-                            height: 170px;
-                            width: 170px;
+                            max-height: 200px;
+                            max-width: 250px;
                             box-shadow: 0 0 4px 0px $dark;
                             transition: all .3s ease;
                         }
@@ -1078,4 +1257,211 @@ main {
         }
     }
 
-} 
+}
+
+// --- css media queries --- //
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+    main .stethoscope_div{
+        height: 500px !important;
+        width: 432px !important;
+    }
+    .corner__image--2 {
+        top: 44rem !important;
+        left: 50px !important;
+        height: 196px !important;
+        width: 230px !important;
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+
+    header {
+        .header__image {
+            height: 85vh !important;
+        }
+        .header__elements {
+            height: 85vh !important;
+        }
+    }
+
+    .top_of_menu .website_logo {
+        img {
+            height: 60px !important;
+            width: 60px !important;
+        }
+        span {
+            font-size: $font-medium !important;
+        }
+    }
+
+    section.center_buttons {
+        display: none !important;
+    }
+    section.contact_ways {
+        position: absolute;
+        left: 40px !important;
+        top: unset !important;
+        display: flex !important;
+        bottom: -500px !important;
+
+        div {
+            margin: 0 10px !important;
+            position: relative;
+            
+            p {
+                position: unset !important;
+                left: 0;
+                // top: is set after this property
+
+                a {
+                    font-size: $font-medium !important;
+                }
+            }
+        }
+        .text-pink { color: white !important; }
+        div:nth-child(1) p { top: unset !important; transform: unset !important; }
+        div:nth-child(2) p { top: unset !important; transform: unset !important; }
+        div:nth-child(3) p { top: unset !important; transform: unset !important; }
+        div:nth-child(4) p { top: unset !important; transform: unset !important; }
+    }
+    
+    nav .sidebar_toggle_div {
+        display: block !important;
+    }
+    nav ul.megamenu {
+        display: none !important;
+    }
+
+    main .stethoscope_div {
+        height: 200px !important;
+        width: 180px !important;
+    }
+
+    .owl-nav {
+        display: none !important;
+    }
+}
+
+
+
+@media (max-width: 700px) {
+
+    .corner__image--1{ display: none; }
+    .corner__image--2{ display: none; }
+    .corner__image--3{ color: red; }
+
+    header {
+        .header__image {
+            height: 70vh !important;
+        }
+        .header__elements {
+            height: 70vh !important;
+        }
+    }
+
+    .search__header {
+        .text {
+            font-size: $font-small !important;
+        }
+        .link {
+            margin-top: 20px !important;
+        }
+    }
+
+    .top_of_menu .website_logo {
+        margin-bottom: 10px;
+    }
+    .top_of_menu .website_option {
+        margin: auto !important;
+        margin-bottom: 10px !important;
+    }
+    section.contact_ways {
+        bottom: -450px !important;
+    }
+    .container_1 .search__box {
+        form {
+            flex-wrap: wrap;
+            flex-direction: column !important;
+
+            p {
+                display: none;
+            }
+            input {
+                color: $dark !important;
+            }
+
+            .line {
+                width: 170px !important;
+                background-color: $light !important;
+            }
+        }
+        .vertical_line {
+            display: none !important;
+        }
+        img {
+            height: 100px !important;
+        }
+    }
+    .gallery_image--next, .gallery_image--prev {
+        display:  none !important;
+    }
+    .gallery__more {
+        margin-top: 50px !important;
+
+        .line {
+            width: 100px !important;
+        }
+        .more_info {
+            display: flex;
+            align-items: center;
+
+            .line {
+                height: 5px;
+                width: 160px;
+                background: url(../img/line-ltr.png) no-repeat center center /cover;
+            }
+            div {
+
+                a {
+                    color: white;
+                    background-color: $dark;
+                    border-radius: 15px;
+                    text-align: center;
+                    padding: 4px 9px;
+                    display: block;
+                    font-size: $font-small;
+                }
+            }
+        }
+    }
+
+    main article .container_2 .map__wrapper .textbox {
+        margin-bottom: 2rem;
+    }
+    .insurance__item img {
+        filter: grayscale(0) !important;
+    }
+    section.contact_ways {
+        display: none !important;
+    }
+}
+
+
+
+@media (max-width: 400px) {
+    .corner__image--3{ display: none; }
+
+    .gallery__more .line {
+        display: none;
+    }
+
+    .doctors__gallery .gallery_image .gallery__info {
+        margin-right: unset !important;
+    }
+    header .bottom_tringle {
+        clip-path: polygon(0 0, 65% 0, 75% 65px, 85% 0, 100% 0, 100% 65px, 0 65px) !important;
+    }
+}
