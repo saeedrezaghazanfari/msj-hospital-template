@@ -4,6 +4,18 @@
 
 // preloading - navbar - messagebox - footer and Shared Parts Code are Here!
 
+body.ltr_template {
+
+    section.message_box {
+        left: 30px !important;
+        right: unset !important;
+
+        .message {
+            padding: 12px 20px 12px 15px;
+        }
+    }
+}
+
 section#preloading {
     display: flex;
     justify-content: center;
@@ -170,98 +182,105 @@ section#megamenu__navbar {
             padding: 0 20px;
         }
     }
-    li.megamenu__item {
+    .wrapper {
+        max-width: 1105px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
 
-        &:hover div.megamenu__menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0px) !important;
-        }
+        li.megamenu__item {
 
-        & > a { // toggle of mega menu
-            color: white;
-            padding: 1rem;
-            background-color: transparent;
-            font-size: $font-medium;
-        }
-
-        div.megamenu__menu {  // mega menu
-            position: absolute;
-            top: 67px;
-            border-radius: 0 0 5px 5px;
-            width: auto !important;
-            background-color: $dark;
-            z-index: 4;
-            height: auto !important;
-            padding: 7px;
-            overflow: visible;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: row;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-7px);
-            max-height: 450px !important;
-            overflow-y: auto !important;
-
-            &::before {
-                content: '';
-                display: none;
-            }                    
-
-            .megamenu__menu_ul {
+            &:hover div.megamenu__menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0px) !important;
+            }
+    
+            & > a { // toggle of mega menu
+                color: white;
+                padding: 1rem;
+                background-color: transparent;
+                font-size: $font-medium;
+            }
+    
+            div.megamenu__menu {  // mega menu
+                position: absolute;
+                top: 67px;
+                border-radius: 0 0 5px 5px;
+                width: auto !important;
+                background-color: $dark;
+                z-index: 4;
+                height: auto !important;
+                padding: 7px;
+                overflow: visible;
+                transition: all 0.3s ease;
                 display: flex;
-                flex-direction: column;
-                height: 100%;
-
-                .megamenu__wrapper {
-                    flex: 1;
-                    margin: 6px;
-                    min-width: 190px;
-                    max-width: 200px;
-
-                    & > div {
-                        color: white;
-                        font-size: 14px;
-                        font-weight: normal;
-                        background: $light;
-                        padding: 5px 10px !important;
-                        margin: 0;
-
-                        a {
-                            transition: all .3s ease;
-                            display: block;
-                        }
-
-                        &:hover {
-                            a {color: $pink;}
-                        }
-                    }
-                    ul {
-                        padding: 5px;
-
-                        li {
-                            list-style-type: none;
-                            padding: 5px 0;
-                            border-bottom: 1px solid #f2f3f4;
-
+                flex-direction: row;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-7px);
+                max-height: 450px !important;
+                overflow-y: auto !important;
+    
+                &::before {
+                    content: '';
+                    display: none;
+                }                    
+    
+                .megamenu__menu_ul {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+    
+                    .megamenu__wrapper {
+                        flex: 1;
+                        margin: 6px;
+                        min-width: 190px;
+                        max-width: 200px;
+    
+                        & > div {
+                            color: white;
+                            font-size: 14px;
+                            font-weight: normal;
+                            background: $light;
+                            padding: 5px 10px !important;
+                            margin: 0;
+    
                             a {
-                                color: white;
-                                display: block;
                                 transition: all .3s ease;
-                                
-                                .fa-chevron-left {
-                                    font-size: 8px;
-                                    padding: 0 3px;
-                                    color: #c5c5c5;
+                                display: block;
+                            }
+    
+                            &:hover {
+                                a {color: $pink;}
+                            }
+                        }
+                        ul {
+                            padding: 5px;
+    
+                            li {
+                                list-style-type: none;
+                                padding: 5px 0;
+                                border-bottom: 1px solid #f2f3f4;
+    
+                                a {
+                                    color: white;
+                                    display: block;
                                     transition: all .3s ease;
-                                }
-
-                                &:hover {
-                                    color: $pink;
-
+                                    
                                     .fa-chevron-left {
-                                        transform: translateX(-2px);
+                                        font-size: 8px;
+                                        padding: 0 3px;
+                                        color: #c5c5c5;
+                                        transition: all .3s ease;
+                                    }
+    
+                                    &:hover {
+                                        color: $pink;
+    
+                                        .fa-chevron-left {
+                                            transform: translateX(-2px);
+                                        }
                                     }
                                 }
                             }
@@ -424,6 +443,8 @@ footer {
     }
 }
 
+
+// media queries
 
 
 @media (max-width: 600px) {

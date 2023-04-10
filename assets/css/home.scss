@@ -4,6 +4,91 @@
 
 // header and main tag are here !!
 
+body.ltr_template {
+    direction: ltr !important;
+    text-align: left;
+
+    .fa-chevron-left {
+        transform: rotate(180deg) !important;
+    }
+    .chevron_active {
+        color: black;
+        transform: rotate(275deg) !important;
+    }
+    header .header__elements .container section.top_of_menu .website_option ul.chnage_lang_toggle {
+        right: 72px !important;
+        left: unset;
+    }
+    header .header__elements .container section.contact_ways {
+        right: 120px !important;
+        left: unset !important;
+    }
+    header .header__elements .container section.center_buttons {
+        right: 225px;
+        left: unset !important;
+    }
+    header .bottom_tringle {
+        clip-path: polygon(0 0, 20% 0, 25% 65px, 30% 0, 100% 0, 100% 65px, 0 65px) !important;
+    }
+    main .stethoscope_div {
+        right: 0;
+        transform: rotateY(180deg);
+        left: unset !important;
+    }
+    main article {
+        .corner__image--1 {
+            left: -40px;
+            right: unset !important;
+            top: 40rem !important;
+        }
+        .corner__image--2 {
+            display: none;
+        }
+        .corner__image--3 {
+            left: -44px !important;
+            right: unset;
+        } 
+    }
+    header .header__elements .container nav .sidebar_wrapper .sidebar_glass ul.sidebar_megamenu {
+        transform: translateX(-250px);
+        li.close_div {
+            text-align: right;
+        }
+    }
+
+    main article .container_1 .gallery__more .more_info .line,  main article .container_1 .gallery__more .reservation .line  {
+        transform: rotate(180deg) !important;
+    }
+
+    main article .container_1 .doctors__wrapper .doctors__gallery {
+        .gallery_image {
+            &--prev {
+                order: 2;
+            }
+            &--center {
+                order: 3;
+            }
+            &--next {
+                order: 4;
+                & .gallery__info { display: none; }
+            }
+        }
+        .div__prev {
+            order: 1;
+            .fa-chevron-left {
+                transform: unset !important;
+            }
+        }
+        .div__next {
+            order: 5;
+        }
+        .gallery__info {
+            margin-left: 71px !important;
+        }
+    }
+
+}
+
 header {
 
     .header__slider {
@@ -211,7 +296,7 @@ header {
                 
                                 & > a { // toggle of mega menu
                                     color: $dark;
-                                    padding: 1rem;
+                                    padding: 0 1rem;
                                     background-color: transparent;
                                     font-size: $font-small;
 
@@ -1262,8 +1347,11 @@ main {
 
 }
 
+
 // --- css media queries --- //
 
+
+// 1200 < x < 1600
 @media (min-width: 1200px) and (max-width: 1600px) {
     main .stethoscope_div{
         height: 500px !important;
@@ -1278,7 +1366,7 @@ main {
 }
 
 
-
+// x < 1200
 @media (max-width: 1200px) {
 
     header {
@@ -1349,7 +1437,7 @@ main {
 }
 
 
-
+// x < 700
 @media (max-width: 700px) {
 
     .corner__image--1{ display: none; }
@@ -1454,6 +1542,7 @@ main {
 
 
 
+// x < 400
 @media (max-width: 400px) {
     .corner__image--3{ display: none; }
 

@@ -248,9 +248,13 @@ document.querySelector('section#megamenu__navbar .bars_div').addEventListener('c
 // close menubar
 document.querySelector('.sidebar_megamenu .close_div button').addEventListener('click', () => {
     document.querySelector('.sidebar_wrapper ul.sidebar_megamenu').style.transform = 'translateX(250px)';    
+    if(document.querySelector('.ltr_template .sidebar_wrapper ul.sidebar_megamenu')) {
+        document.querySelector('.ltr_template .sidebar_wrapper ul.sidebar_megamenu').style.transform = 'translateX(-250px)';    
+    }
+        
     setTimeout(() => {
-        document.querySelector('.sidebar_wrapper ul.sidebar_megamenu').style.display = 'none';
-        document.querySelector('nav .sidebar_wrapper').style.display = 'none';
+        document.querySelector('body .sidebar_wrapper ul.sidebar_megamenu').style.display = 'none';
+        document.querySelector('body nav .sidebar_wrapper').style.display = 'none';
     }, 300);
 });
 
