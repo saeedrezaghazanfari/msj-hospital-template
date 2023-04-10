@@ -1,16 +1,155 @@
 
 @import 'config/variables';
+@import 'config/animations';
 
-// navbar - footer and Shared Parts Code are Here!
+// preloading - navbar - messagebox - footer and Shared Parts Code are Here!
+
+section#preloading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    z-index: 103;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    backdrop-filter: blur(4px);
+    background-color: rgba(255,255,255, .84);
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
+
+    .wrapper {
+        .spinner {
+            width: 58px;
+            height: 58px;
+            border: 5px solid $pink;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            position: relative;
+            animation: pulse 1s linear infinite;
+            
+            &::after {
+                content: '';
+                position: absolute;
+                width: 58px;
+                height: 58px;
+                border: 5px solid $pink;
+                border-radius: 50%;
+                display: inline-block;
+                box-sizing: border-box;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                animation: scaleUp 1s linear infinite;
+            }
+        }
+        .text {
+            h2 {
+                margin-top: 15px;
+                margin-bottom: 20px;
+                font-size: $font-medium;
+            }
+            p {
+                font-size: $font-very-small;
+                color: $dark;
+            }
+        }
+    }
+}
+
+section.message_box {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 103;
+    top: 30px;
+    right: 30px;
+
+    .message {
+        margin: 5px;
+        padding: 12px 15px 12px 20px;
+        background-color: white;
+        color: white;
+        font-size: $font-small;
+        border-radius: 6px;
+        position: relative;
+
+        &:hover .glass {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .glass {
+            border-radius: 6px;
+            position: absolute;
+            inset: 0;
+            backdrop-filter: blur(4px);
+            background-color: rgba(0,0,0, .5);
+            text-align: center;
+            cursor: pointer;
+            font-size: $font-small;
+            padding-top: 14px;
+            opacity: 0;
+            visibility: none;
+            transition: all .3s ease;
+
+            i {
+                padding: 0 5px;
+            }
+        }
+
+        i.message_icon {
+            background-color: white;
+            border-radius: 50%;
+            margin: 0 4px;
+        }
+    }
+    .message--success {
+        background-color:  #70b900;
+
+        i.message_icon {
+            padding: 7px 5px 3px 5px;
+            color: #70b900;
+        }
+    }
+    .message--danger {
+        background-color:  rgb(255, 44, 44);
+
+        i.message_icon {
+            padding: 5px;
+            color: rgb(255, 44, 44);
+        }
+    }
+    .message--warning {
+        background-color:  rgb(255, 164, 44);
+
+        i.message_icon {
+            padding: 5px;
+            color: rgb(255, 164, 44);
+        }
+    }
+    .message--info {
+        background-color: rgb(84, 195, 255);
+
+        i.message_icon {
+            padding: 7px 9px 5px 10px;
+            color: rgb(84, 195, 255);
+        }
+    }
+}
 
 section#megamenu__navbar {
-    border-bottom: 2px solid $light;
     position: fixed !important;
     left: 0;
     right: 0;
     top: 0;
     padding: 20px !important;
-    background-color: white;
+    background-color: $dark;
     z-index: 100;
     display: none;
     flex-direction: row;
@@ -22,12 +161,12 @@ section#megamenu__navbar {
         display: none;
 
         a {
-            color: $dark;
+            color: white;
         }
         button {
-            color: $dark;
+            color: white;
             font-size: 14pt;
-            background-color: white;
+            background-color: $dark;
             padding: 0 20px;
         }
     }
@@ -40,7 +179,7 @@ section#megamenu__navbar {
         }
 
         & > a { // toggle of mega menu
-            color: $dark;
+            color: white;
             padding: 1rem;
             background-color: transparent;
             font-size: $font-medium;
@@ -49,9 +188,9 @@ section#megamenu__navbar {
         div.megamenu__menu {  // mega menu
             position: absolute;
             top: 67px;
-            border-radius: 5px;
+            border-radius: 0 0 5px 5px;
             width: auto !important;
-            background-color: white;
+            background-color: $dark;
             z-index: 4;
             height: auto !important;
             padding: 7px;
@@ -62,10 +201,8 @@ section#megamenu__navbar {
             opacity: 0;
             visibility: hidden;
             transform: translateY(-7px);
-            border-top: 1px solid white;
-            border-left: 1px solid $light;
-            border-right: 1px solid $light;
-            border-bottom: 1px solid $light;
+            max-height: 450px !important;
+            overflow-y: auto !important;
 
             &::before {
                 content: '';
@@ -84,10 +221,10 @@ section#megamenu__navbar {
                     max-width: 200px;
 
                     & > div {
-                        color: $dark;
+                        color: white;
                         font-size: 14px;
                         font-weight: normal;
-                        background: #f2f3f4;
+                        background: $light;
                         padding: 5px 10px !important;
                         margin: 0;
 
@@ -109,7 +246,7 @@ section#megamenu__navbar {
                             border-bottom: 1px solid #f2f3f4;
 
                             a {
-                                color: $dark;
+                                color: white;
                                 display: block;
                                 transition: all .3s ease;
                                 

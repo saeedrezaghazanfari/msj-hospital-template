@@ -241,12 +241,12 @@ header {
                                     display: flex;
                                     flex-direction: column;
                                     display: none;
-                                    
+
                                     .megamenu__menu_ul {
                                         display: flex;
                                         flex-direction: column;
                                         height: 100%;
-                
+                                        
                                         .megamenu__wrapper {
                                             flex: 1;
                                             margin: 6px;
@@ -339,19 +339,20 @@ header {
                     }
                     li.megamenu__item {
         
+                        
                         &:hover div.megamenu__menu {
                             opacity: 1;
                             visibility: visible;
                             transform: translateY(0px) !important;
                         }
-        
+                        
                         & > a { // toggle of mega menu
                             color: white;
                             padding: 1rem;
                             background-color: transparent;
                             font-size: $font-medium;
                         }
-        
+                        
                         div.megamenu__menu {  // mega menu
                             position: absolute;
                             top: 40px;
@@ -368,6 +369,8 @@ header {
                             opacity: 0;
                             visibility: hidden;
                             transform: translateY(-7px);
+                            max-height: 450px !important;
+                            overflow-y: auto !important;
 
                             &::before {
                                 content: '';
@@ -391,7 +394,7 @@ header {
                                     margin: 6px;
                                     min-width: 190px;
                                     max-width: 200px;
-        
+
                                     & > div {
                                         color: $dark;
                                         font-size: 14px;

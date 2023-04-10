@@ -27,7 +27,45 @@
 </head>
 
 <body>
+
+    <!-- preloading page -->
+    <section id="preloading">
+        <div class="wrapper">
+            <div class="spinner"></div>
+            <div class="text">
+                <h2>بیمارستان تخصصی موسی ابن جعفر (ع)</h2>
+                <p>در حال بارگیری...</p>
+            </div>
+        </div>
+    </section>
     
+    <!-- message box -->
+    <section class="message_box d-none">
+
+        <div class="message message--success" onclick="close_alertbox('message_1')" id="message_1">
+            <div class="glass">برای بستن <i class="fa fa-mouse-pointer"></i> کنید</div>
+            <i class="fa fa-check message_icon"></i>
+            <span>عملیات موفقیت آمیز بود</span>
+        </div>
+        <div class="message message--danger" onclick="close_alertbox('message_2')" id="message_2">
+            <div class="glass">برای بستن <i class="fa fa-mouse-pointer"></i> کنید</div>
+            <i class="fa fa-exclamation-triangle message_icon"></i>
+            <span>عملیات موفقیت آمیز بود</span>
+        </div>
+        <div class="message message--warning" onclick="close_alertbox('message_3')" id="message_3">
+            <div class="glass">برای بستن <i class="fa fa-mouse-pointer"></i> کنید</div>
+            <i class="fa fa-exclamation-triangle message_icon"></i>
+            <span>عملیات موفقیت آمیز بود</span>
+        </div>
+        <div class="message message--info" onclick="close_alertbox('message_4')" id="message_4">
+            <div class="glass">برای بستن <i class="fa fa-mouse-pointer"></i> کنید</div>
+            <i class="fa fa-info message_icon"></i>
+            <span>عملیات موفقیت آمیز بود</span>
+        </div>
+
+    </section>
+
+    <!-- megamenu in navbar -->
     <section id="megamenu__navbar">
 
         <li class="bars_div">
@@ -123,6 +161,7 @@
                             <li role="menuitem"><a href="#"><i class="fa fa-chevron-left"></i> Item 5</a></li>
                             <li role="menuitem"><a href="#"><i class="fa fa-chevron-left"></i> Item 6</a></li>
                             <li role="menuitem"><a href="#"><i class="fa fa-chevron-left"></i> Item 7</a></li>
+                            
                         </ul>
                     </div>
                 </div>

@@ -282,3 +282,25 @@ window.onscroll = function() {
 
     }
 }
+
+
+function close_alertbox(elementId) {
+    $(`#${elementId}`).fadeOut()
+}
+
+
+document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        document.getElementById('preloading').style.opacity = '1';
+        document.getElementById('preloading').style.visibility = 'visible';
+        setTimeout( () => {
+            document.getElementById('preloading').style.display = 'flex';
+        }, 1500)
+    } else {
+        document.getElementById('preloading').style.opacity = '0';
+        document.getElementById('preloading').style.visibility = 'none';
+        setTimeout( () => {
+            document.getElementById('preloading').style.display = 'none';
+        }, 1500)
+    }
+};
