@@ -8,6 +8,17 @@ body.ltr_template {
     direction: ltr !important;
     text-align: left;
 
+    li.megamenu__item  > a { // toggle of mega menu
+        &.li_active {
+            &::after {
+                content: '';
+                left: 9px !important;
+                right: -42px !important;
+            }
+            
+        }
+    }
+
     .fa-chevron-left {
         transform: rotate(180deg) !important;
     }
@@ -299,7 +310,11 @@ header {
                                     padding: 0 1rem;
                                     background-color: transparent;
                                     font-size: $font-small;
+                                    position: relative;
 
+                                    &.li_active {
+                                        color: $pink;
+                                    }
                                     .fa-chevron-left {
                                         font-size: 8px;
                                         padding: 0 3px;
@@ -436,9 +451,23 @@ header {
                             padding: 1rem;
                             background-color: transparent;
                             font-size: $font-medium;
+                            position: relative;
 
                             i {
                                 font-size: 9pt;
+                            }
+
+                            &.li_active {
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 7px;
+                                    right: 9px;
+                                    left: -42px;
+                                    height: 2px;
+                                    width: 85%;
+                                    background-color: white;
+                                }
                             }
                         }
                         

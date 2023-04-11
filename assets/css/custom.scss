@@ -201,8 +201,22 @@ section#megamenu__navbar {
                 padding: 1rem;
                 background-color: transparent;
                 font-size: $font-medium;
+                position: relative;
+
                 i {
                     font-size: 9pt;
+                }
+                &.li_active {
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 7px;
+                        right: 9px;
+                        left: -42px;
+                        height: 2px;
+                        width: 85%;
+                        background-color: white;
+                    }
                 }
             }
     
@@ -398,7 +412,7 @@ footer {
             li {
                 margin: 5px 7px;
                 padding: 5px 11px 1px 11px;
-                border: 3px solid white;
+                background-color: $dark;
                 border-radius: 13px;
                 transition: all .3s ease;
 

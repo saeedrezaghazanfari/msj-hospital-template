@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="assets/img/logo-light.png">
+    <link rel="icon" href="assets/img/logo-light.min.png">
 	<meta name="theme-color" content="#434D59">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>بیمارستان موسی ابن جعفر</title>
+    <title>...</title>
 
     <!-- CDNs -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" /> 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
     <!-- External files2 -->
@@ -26,7 +24,7 @@
 
 </head>
 
-<body class="ltr_template">
+<body class="ltr_templatee">
 
     <!-- preloading page -->
     <section id="preloading">
@@ -75,11 +73,11 @@
 
         <div class="wrapper">
             <li class="megamenu__item" role="menuitem">
-                <a href="#">خانه</a>
+                <a href="#" class="li_active">خانه</a>
             </li>
             
             <li class="megamenu__item" role="menuitem">
-                <a href="#">درباره ما</a>
+                <a href="#">درباره ما <i class="fa fa-chevron-down"></i></a>
                 <div class="megamenu__menu" aria-hidden="true" role="menu">
                     <div class="megamenu__menu_ul">
                         <div class="megamenu__wrapper">
@@ -118,7 +116,7 @@
             </li>
     
             <li class="megamenu__item" role="menuitem">
-                <a href="#">راهنمای بیمار</a>
+                <a href="#">راهنمای بیمار <i class="fa fa-chevron-down"></i></a>
                 <div class="megamenu__menu" aria-hidden="true" role="menu">
                     <div class="megamenu__menu_ul">
                         <div class="megamenu__wrapper">
@@ -137,7 +135,7 @@
             </li>
     
             <li class="megamenu__item" role="menuitem">
-                <a href="#">خدمات و امکانات</a>
+                <a href="#">خدمات و امکانات <i class="fa fa-chevron-down"></i></a>
                 <div class="megamenu__menu" aria-hidden="true" role="menu">
                     <div class="megamenu__menu_ul">
                         <div class="megamenu__wrapper">
@@ -161,8 +159,7 @@
                                 <li role="menuitem"><a href="#"><i class="fa fa-chevron-left"></i> Item 4</a></li>
                                 <li role="menuitem"><a href="#"><i class="fa fa-chevron-left"></i> Item 5</a></li>
                                 <li role="menuitem"><a href="#"><i class="fa fa-chevron-left"></i> Item 6</a></li>
-                                <li role="menuitem"><a href="#"><i class="fa fa-chevron-left"></i> Item 7</a></li>
-                                
+                                <li role="menuitem"><a href="#"><i class="fa fa-chevron-left"></i> Item 7</a></li>                                
                             </ul>
                         </div>
                     </div>
@@ -193,7 +190,7 @@
             </li>
     
             <li class="megamenu__item" role="menuitem">
-                <a href="#">خدمات الکترونیکی</a>
+                <a href="#">خدمات الکترونیکی <i class="fa fa-chevron-down"></i></a>
                 <div class="megamenu__menu" aria-hidden="true" role="menu">
                     <div class="megamenu__menu_ul">
                         <div class="megamenu__wrapper">
@@ -208,7 +205,7 @@
             </li>
     
             <li class="megamenu__item" role="menuitem">
-                <a href="#">گردشگری سلامت</a>
+                <a href="#">گردشگری سلامت <i class="fa fa-chevron-down"></i></a>
                 <div class="megamenu__menu" aria-hidden="true" role="menu">
                     <div class="megamenu__menu_ul">
                         <div class="megamenu__wrapper">
@@ -230,7 +227,7 @@
             </li>
               
             <li class="megamenu__item" role="menuitem">
-                <a href="#">تماس</a>
+                <a href="#">تماس <i class="fa fa-chevron-down"></i></a>
                 <div class="megamenu__menu" aria-hidden="true" role="menu">
                     <div class="megamenu__menu_ul">
                         <div class="megamenu__wrapper">
@@ -259,37 +256,13 @@
 
     </section>
 
-    .fa-chevron-left {
-        transform: rotate(180deg) !important;
-    }
-    .chevron_active {
-        color: black;
-        transform: rotate(275deg) !important;
-    }
-    header .header__elements .container section.top_of_menu .website_option ul.chnage_lang_toggle {
-        right: 72px !important;
-        left: unset;
-    }
-    header .header__elements .container section.contact_ways {
-        right: 120px !important;
-        left: unset !important;
-    }
-    header .header__elements .container section.center_buttons {
-        right: 225px;
-        left: unset !important;
-    }
-    header .bottom_tringle {
-        clip-path: polygon(0 0, 20% 0, 25% 65px, 30% 0, 100% 0, 100% 65px, 0 65px) !important;
-    }
-    main .stethoscope_div {
-        right: 0;
     <!-- + header -->
     <header id="header">
 
         <section class="header__slider owl-carousel1 owl-carousel owl-theme owl-loaded owl-drag">
-            <div class="header__image item" style="background-image: url(assets/img/_test.jpg);"></div>
-            <div class="header__image item" style="background-image: url(assets/img/_doctor.png);"></div>
-            <div class="header__image item" style="background-image: url(assets/img/map.png);"></div>
+            <div class="header__image item" style="background-image: url(assets/img/_test.min.png);"></div>
+            <div class="header__image item" style="background-image: url(assets/img/_doctor.min.png);"></div>
+            <div class="header__image item" style="background-image: url(assets/img/map.min.png);"></div>
         </section>
 
         <section class="header__elements">
@@ -300,7 +273,7 @@
 
                     <div class="website_logo">
                         <a href="/">
-                            <img src="assets/img/logo-light.png" alt="website logo">
+                            <img src="assets/img/logo-light.min.png" alt="website logo">
                             <span class="animate__animated animate__fadeInUp wow" data-wow-delay="1.5s">بیمارستان تخصصی موسی بن جعفر(ع)</span>
                         </a>
                     </div>
@@ -320,10 +293,9 @@
                                 <button type="submit"><i class="fa fa-search"></i></button>
                             </div>
                         </form>
-                        <img class="image_search" src="assets/img/search.png" alt="search icon">
+                        <img class="image_search" src="assets/img/search.min.png" alt="search icon">
 
-                    </div>
-    
+                    </div>    
     
                 </section>
     
@@ -342,7 +314,7 @@
                                 </li>
 
                                 <li class="megamenu__item" role="menuitem">
-                                    <a href="#" class="px1">خانه</a>
+                                    <a href="#" class="px1 li_active">خانه</a>
                                 </li>
                                 
                                 <li class="megamenu__item" role="menuitem">
@@ -528,11 +500,11 @@
                         </li>
 
                         <li class="megamenu__item" role="menuitem">
-                            <a href="#">خانه</a>
+                            <a href="#" class="li_active">خانه</a>
                         </li>
                         
                         <li class="megamenu__item" role="menuitem">
-                            <a href="#">درباره ما</a>
+                            <a href="#">درباره ما <i class="fa fa-chevron-down"></i></a>
                             <div class="megamenu__menu" aria-hidden="true" role="menu">
                                 <div class="megamenu__menu_ul">
                                     <div class="megamenu__wrapper">
@@ -571,7 +543,7 @@
                         </li>
         
                         <li class="megamenu__item" role="menuitem">
-                            <a href="#">راهنمای بیمار</a>
+                            <a href="#">راهنمای بیمار <i class="fa fa-chevron-down"></i></a>
                             <div class="megamenu__menu" aria-hidden="true" role="menu">
                                 <div class="megamenu__menu_ul">
                                     <div class="megamenu__wrapper">
@@ -590,7 +562,7 @@
                         </li>
 
                         <li class="megamenu__item" role="menuitem">
-                            <a href="#">خدمات و امکانات</a>
+                            <a href="#">خدمات و امکانات <i class="fa fa-chevron-down"></i></a>
                             <div class="megamenu__menu" aria-hidden="true" role="menu">
                                 <div class="megamenu__menu_ul">
                                     <div class="megamenu__wrapper">
@@ -645,7 +617,7 @@
                         </li>
 
                         <li class="megamenu__item" role="menuitem">
-                            <a href="#">خدمات الکترونیکی</a>
+                            <a href="#">خدمات الکترونیکی <i class="fa fa-chevron-down"></i></a>
                             <div class="megamenu__menu" aria-hidden="true" role="menu">
                                 <div class="megamenu__menu_ul">
                                     <div class="megamenu__wrapper">
@@ -660,7 +632,7 @@
                         </li>
 
                         <li class="megamenu__item" role="menuitem">
-                            <a href="#">گردشگری سلامت</a>
+                            <a href="#">گردشگری سلامت <i class="fa fa-chevron-down"></i></a>
                             <div class="megamenu__menu" aria-hidden="true" role="menu">
                                 <div class="megamenu__menu_ul">
                                     <div class="megamenu__wrapper">
@@ -682,7 +654,7 @@
                         </li>
                           
                         <li class="megamenu__item" role="menuitem">
-                            <a href="#">تماس</a>
+                            <a href="#">تماس <i class="fa fa-chevron-down"></i></a>
                             <div class="megamenu__menu" aria-hidden="true" role="menu">
                                 <div class="megamenu__menu_ul">
                                     <div class="megamenu__wrapper">
@@ -729,7 +701,7 @@
 
                 <section class="center_buttons">
                     <div>
-                        <img src="assets/img/network.png" alt="qrcode image">
+                        <img src="assets/img/network.min.png" alt="qrcode image">
                     </div>
                     <div class="button_wrapper"><a href="">پزشکان</a></div>
                     <div class="button_wrapper"><a href="">پرسنل</a></div>
@@ -749,365 +721,7 @@
     <!-- + content -->
     <main>
 
-        <div class="stethoscope_div"></div>
-
         <article>
-
-            <div class="corner__image corner__image--1"></div>
-            <div class="corner__image corner__image--2"></div>
-            <div class="corner__image corner__image--3"></div>
-
-            <div class="search__header">
-                <div class="line"></div>
-                <div class="text">جستجو در بیمارستان</div>
-                <div class="link"><a href=""><i class="fas fa-play"></i>&nbsp; تماشا ویدئو</a></div>
-            </div>
-
-            <div class="container_1">
-
-                <div class="search__box">
-                    <img src="assets/img/logo-dark.png" alt="">
-    
-                    <form>
-
-                        <div class="inputs_wrapper">
-                            <div class="inputs">
-                                <input type="text" placeholder="پزشک">
-                                <div class="line"></div>
-                                <select>
-                                    <option value="">پزشک</option>
-                                    <option value="">دکتر ناصری</option>
-                                    <option value="">دکتر ناصری</option>
-                                    <option value="">دکتر ناصری</option>
-                                </select>
-                            </div>
-                            <div class="selected_item">
-                                <p>----</p>
-                            </div>
-                        </div>
-
-                        <div class="vertical_line"></div>
-
-                        <div class="inputs_wrapper">
-                            <div class="inputs">
-                                <input type="text" placeholder="تخصص">
-                                <div class="line"></div>
-                                <select>
-                                    <option value="">تخصص</option>
-                                    <option value="">دکتر ناصری</option>
-                                    <option value="">دکتر ناصری</option>
-                                    <option value="">دکتر ناصری</option>
-                                </select>
-                            </div>
-                            <div class="selected_item">
-                                <p>----</p>
-                            </div>
-                        </div>
-
-                        <div class="vertical_line"></div>
-
-                        <div class="inputs_wrapper">
-                            <div class="inputs">
-                                <input type="text" placeholder="کلینیک">
-                                <div class="line"></div>
-                                <select>
-                                    <option value="">کلینیک</option>
-                                    <option value="">دکتر ناصری</option>
-                                    <option value="">دکتر ناصری</option>
-                                    <option value="">دکتر ناصری</option>
-                                </select>
-                            </div>
-                            <div class="selected_item">
-                                <p>----</p>
-                            </div>
-                        </div>
-                        
-                        <div class="link">
-                            <button type="submit">
-                                <i class="fas fa-search"></i>&nbsp; جستجو
-                            </button>
-                        </div>
-                    </form>
-    
-    
-                </div>
-
-                <div class="doctors__wrapper">
-
-                    <div class="doctors__gallery">
-
-                        <div class="div__next">
-                            <div><i class="fa fa-chevron-right"></i></div>
-                        </div>
-
-                        <div class="gallery_image gallery_image--next" style="background-image: url(assets/img/_doctor.png);">
-                            <div class="gallery__info">
-                                <div class="skill">متخصص مغز و اعصاب</div>
-                                <div class="name">دکتر محسن سلامی</div>
-                                <div class="counter">4/9</div>
-                            </div>
-                        </div>
-                        <div class="gallery_image gallery_image--center" style="background-image: url(assets/img/_doctor.png);">
-                            <div class="gallery__info">
-                                <div class="skill">متخصص مغز و اعصاب</div>
-                                <div class="name">دکتر محسن سلامی</div>
-                                <div class="counter">4/9</div>
-                            </div>
-                        </div>
-                        <div class="gallery_image gallery_image--prev" style="background-image: url(assets/img/_doctor.png);">
-                            <div class="gallery__info">
-                                <div class="skill">متخصص مغز و اعصاب</div>
-                                <div class="name">دکتر محسن سلامی</div>
-                                <div class="counter">4/9</div>
-                            </div>
-                        </div>
-
-                        <div class="div__prev">
-                            <div><i class="fa fa-chevron-left"></i></div>
-                        </div>
-
-                    </div>
-
-                    <div class="gallery__more">
-                        <div class="reservation">
-                            <div class="line"></div>
-                            <div>
-                                <a id="doctor_hours_link" href="">ساعات حضور</a>
-                            </div>
-                        </div>
-                        <div class="more_info">
-                            <div>
-                                <a id="doctor_info_link" href="">اطلاعات بیشتر</a>
-                            </div>
-                            <div class="line"></div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="three__elements">
-
-                    <div class="one_element">
-                        <img src="assets/img/hands.png" alt="">
-                        <h1>کمک‌های مردمی</h1>
-                        <h3>از خدمات بیمارستان ما</h3>
-                        <p><a href="">جهت کسب اطلاعات بیشتر کلیک کنید.</a></p>
-                    </div>
-                    
-                    <div class="one_element">
-                        <img src="assets/img/network.png" alt="">
-                        <h1>نوبت‌دهی آنلاین</h1>
-                        <h3>از خدمات بیمارستان ما</h3>
-                        <p><a href="">جهت کسب اطلاعات بیشتر کلیک کنید.</a></p>
-                    </div>
-
-                    <div class="one_element">
-                        <img src="assets/img/graduation-cap.png" alt="">
-                        <h1>آموزش</h1>
-                        <h3>از خدمات بیمارستان ما</h3>
-                        <p><a href="">جهت کسب اطلاعات بیشتر کلیک کنید.</a></p>
-                    </div>
-
-                </div>
-                
-            </div>
-
-            <div class="more__services">
-
-                <div class="gallery__header">
-                    خدمات بیشتر
-                </div>
-
-                <div class="gallery__services owl-carousel2 owl-carousel owl-theme owl-loaded owl-drag">
-                    
-                    <div class="gallery__item item">
-                        <a href="">
-                            <img src="assets/img/graduation-cap.png" alt="">
-                            <p>تصویربرداری</p>
-                        </a>
-                    </div>
-
-                    <div class="gallery__item item">
-                        <a href="">
-                            <img src="assets/img/graduation-cap.png" alt="">
-                            <p>تصویربرداری</p>
-                        </a>
-                    </div>
-
-                    <div class="gallery__item item">
-                        <a href="">
-                            <img src="assets/img/graduation-cap.png" alt="">
-                            <p>تصویربرداری</p>
-                        </a>
-                    </div>
-
-                    <div class="gallery__item item">
-                        <a href="">
-                            <img src="assets/img/graduation-cap.png" alt="">
-                            <p>تصویربرداری</p>
-                        </a>
-                    </div>
-
-                    <div class="gallery__item item">
-                        <a href="">
-                            <img src="assets/img/graduation-cap.png" alt="">
-                            <p>تصویربرداری</p>
-                        </a>
-                    </div>
-
-                    <div class="gallery__item item">
-                        <a href="">
-                            <img src="assets/img/graduation-cap.png" alt="">
-                            <p>تصویربرداری</p>
-                        </a>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="container_2">
-
-                <div class="blogs__wrapper">
-
-                    <div class="header">اخبار و رویدادها</div>
-
-                    <div class="gallery__blogs owl-carousel3 owl-carousel owl-theme owl-loaded owl-drag">
-    
-                        <div class="gallery__item item">
-                            <div class="blog__image" style="background-image: url(assets/img/hands.png);">
-                                <div class="blog__image__glass">
-                                    <div class="blog__date">
-                                        <div class="day">23</div>
-                                        <div class="month_year">
-                                            <div class="month">02</div>
-                                            <div class="year">01</div>
-                                        </div>
-                                    </div>
-                                    <div class="blog__human">
-                                        27 روز پیش
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blog__header"><a href="">نوبت‌دهی بیمارستان</a></div>
-                            <div class="blog__text">واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. </div>
-                            <div class="blog__link"><a href="">ادامه مطلب</a></div>
-                        </div>
-    
-                        <div class="gallery__item item">
-                            <div class="blog__image" style="background-image: url(assets/img/hands.png);">
-                                <div class="blog__image__glass">
-                                    <div class="blog__date">
-                                        <div class="day">23</div>
-                                        <div class="month_year">
-                                            <div class="month">02</div>
-                                            <div class="year">01</div>
-                                        </div>
-                                    </div>
-                                    <div class="blog__human">
-                                        27 روز پیش
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blog__header"><a href="">نوبت‌دهی بیمارستان</a></div>
-                            <div class="blog__text">واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. </div>
-                            <div class="blog__link"><a href="">ادامه مطلب</a></div>
-                        </div>
-    
-                        <div class="gallery__item item">
-                            <div class="blog__image" style="background-image: url(assets/img/hands.png);">
-                                <div class="blog__image__glass">
-                                    <div class="blog__date">
-                                        <div class="day">23</div>
-                                        <div class="month_year">
-                                            <div class="month">02</div>
-                                            <div class="year">01</div>
-                                        </div>
-                                    </div>
-                                    <div class="blog__human">
-                                        27 روز پیش
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blog__header"><a href="">نوبت‌دهی بیمارستان</a></div>
-                            <div class="blog__text">واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. </div>
-                            <div class="blog__link"><a href="">ادامه مطلب</a></div>
-                        </div>
-    
-                        <div class="gallery__item item">
-                            <div class="blog__image" style="background-image: url(assets/img/hands.png);">
-                                <div class="blog__image__glass">
-                                    <div class="blog__date">
-                                        <div class="day">23</div>
-                                        <div class="month_year">
-                                            <div class="month">02</div>
-                                            <div class="year">01</div>
-                                        </div>
-                                    </div>
-                                    <div class="blog__human">
-                                        27 روز پیش
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blog__header"><a href="">نوبت‌دهی بیمارستان</a></div>
-                            <div class="blog__text">واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. واکسیناسیون پرسنل کادر درمان بیمارستان موسی بن جعفر با عنایت پروردگار متعال انجام میشود. </div>
-                            <div class="blog__link"><a href="">ادامه مطلب</a></div>
-                        </div>
-    
-    
-                    </div>
-
-                </div>
-
-                <div class="map__wrapper">
-
-                    <div class="textbox">
-                        <h1>مسیرهای دسترسی به بیمارستان</h1>
-                        <p>از طریق لینک زیر اقدام کنید</p>
-                        <div><a href=""><i class="fas fa-map-marker"></i> مشاهده نقشه</a></div>
-                    </div>
-
-                    <img src="assets/img/map.png" alt="">
-
-                </div>
-
-                <div class="insurances_wrapper">
-
-                    <div class="insurance__gallery owl-carousel4 owl-carousel owl-theme owl-loaded owl-drag">
-
-                        <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.png" alt="">
-                        </div>
-                        <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.png" alt="">
-                        </div>
-                        <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.png" alt="">
-                        </div>
-                        <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.png" alt="">
-                        </div>
-                        <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.png" alt="">
-                        </div>
-                        <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.png" alt="">
-                        </div>
-                        <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.png" alt="">
-                        </div>
-                        <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.png" alt="">
-                        </div>
-                        <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.png" alt="">
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
             
         </article>
 
@@ -1119,29 +733,29 @@
     <footer>
         
         <div class="logo__wrapper">
-            <a href="#header"><img src="assets/img/logo-light.png" alt=""></a>
+            <a href="#header"><img src="assets/img/logo-light.min.png" alt=""></a>
         </div>
 
         <div class="elements">
 
             <div class="title">
-                <img src="assets/img/footer-hospital.png" alt="">
+                <img src="assets/img/footer-hospital.min.png" alt="">
             </div>
 
             <div class="links">
                 <ul>
-                    <li><a href=""><i class="fa fa-chevron-left"></i> راهنمای نوبت‌دهی آنلاین</a></li>
-                    <li><a href=""><i class="fa fa-chevron-left"></i> تلفن‌های داخلی</a></li>
-                    <li><a href=""><i class="fa fa-chevron-left"></i> آموزش همگانی</a></li>
+                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".1s"><a href=""><i class="fa fa-chevron-left"></i> راهنمای نوبت‌دهی آنلاین</a></li>
+                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".2s"><a href=""><i class="fa fa-chevron-left"></i> تلفن‌های داخلی</a></li>
+                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".3s"><a href=""><i class="fa fa-chevron-left"></i> آموزش همگانی</a></li>
                 </ul>
                 <ul>
-                    <li><a href=""><i class="fa fa-chevron-left"></i> گالری</a></li>
-                    <li><a href=""><i class="fa fa-chevron-left"></i> پزشکان</a></li>
-                    <li><a href=""><i class="fa fa-chevron-left"></i> مجلات و نشریات</a></li>
-                    <li><a href=""><i class="fa fa-chevron-left"></i> رویدادها</a></li>
+                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".4s"><a href=""><i class="fa fa-chevron-left"></i> گالری</a></li>
+                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".5s"><a href=""><i class="fa fa-chevron-left"></i> پزشکان</a></li>
+                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".6s"><a href=""><i class="fa fa-chevron-left"></i> مجلات و نشریات</a></li>
+                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".7s"><a href=""><i class="fa fa-chevron-left"></i> رویدادها</a></li>
                     <br>
-                    <li><a href=""><i class="fa fa-chevron-left"></i> تماس باما</a></li>
-                    <li><a href=""><i class="fa fa-chevron-left"></i> آدرس ما</a></li>
+                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".8s"><a href=""><i class="fa fa-chevron-left"></i> تماس باما</a></li>
+                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".9s"><a href=""><i class="fa fa-chevron-left"></i> آدرس ما</a></li>
                 </ul>
             </div>
 
