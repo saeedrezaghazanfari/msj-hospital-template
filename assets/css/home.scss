@@ -8,28 +8,6 @@ body.ltr_template {
     direction: ltr !important;
     text-align: left;
 
-    li.megamenu__item  > a { // toggle of mega menu
-        &.li_active {
-            &::after {
-                content: '';
-                left: 9px !important;
-                right: -42px !important;
-            }
-            
-        }
-    }
-
-    .fa-chevron-left {
-        transform: rotate(180deg) !important;
-    }
-    .chevron_active {
-        color: black;
-        transform: rotate(275deg) !important;
-    }
-    header .header__elements .container section.top_of_menu .website_option ul.chnage_lang_toggle {
-        right: 72px !important;
-        left: unset;
-    }
     header .header__elements .container section.contact_ways {
         right: 120px !important;
         left: unset !important;
@@ -59,12 +37,6 @@ body.ltr_template {
             left: -44px !important;
             right: unset;
         } 
-    }
-    header .header__elements .container nav .sidebar_wrapper .sidebar_glass ul.sidebar_megamenu {
-        transform: translateX(-250px);
-        li.close_div {
-            text-align: right;
-        }
     }
 
     main article .container_1 .gallery__more .more_info .line,  main article .container_1 .gallery__more .reservation .line  {
@@ -458,16 +430,7 @@ header {
                             }
 
                             &.li_active {
-                                &::after {
-                                    content: '';
-                                    position: absolute;
-                                    bottom: 7px;
-                                    right: 9px;
-                                    left: -42px;
-                                    height: 2px;
-                                    width: 85%;
-                                    background-color: white;
-                                }
+                                color: $pink;
                             }
                         }
                         
@@ -637,7 +600,7 @@ main {
     position: relative;
 	
     .stethoscope_div {
-        background: url(../img/stethoscope.png) no-repeat center center / cover;
+        background: url(../img/stethoscope.min.png) no-repeat center center / cover;
         height: 620px;
         width: 540px;
         margin-top: -65px;
@@ -660,7 +623,7 @@ main {
                 right: -40px;
                 height: 250px;
                 width: 250px;
-                animation: rotation-h 25s linear infinite;
+                animation: rotation-h 35s linear infinite;
             }
             &--2 {
                 background-color: rgba($color: $pink, $alpha: .2);
@@ -669,7 +632,7 @@ main {
                 left: 120px;
                 height: 300px;
                 width: 300px;
-                animation: rotation-ah 25s linear infinite;
+                animation: rotation-ah 35s linear infinite;
             }
             &--3 {
                 background-color: rgba($color: $pink, $alpha: .3);
@@ -678,7 +641,7 @@ main {
                 right: -44px;            
                 height: 370px;
                 width: 370px;
-                animation: rotation-h 25s linear infinite;
+                animation: rotation-h 35s linear infinite;
             }
         }
 
@@ -946,7 +909,7 @@ main {
                     .line {
                         height: 5px;
                         width: 120px;
-                        background: url(../img/line.png) no-repeat center center /cover;
+                        background: url(../img/line.min.png) no-repeat center center /cover;
                     }
                     div {
 
@@ -968,7 +931,7 @@ main {
                     .line {
                         height: 5px;
                         width: 120px;
-                        background: url(../img/line-ltr.png) no-repeat center center /cover;
+                        background: url(../img/line-ltr.min.png) no-repeat center center /cover;
                     }
                     div {
 
@@ -1545,7 +1508,7 @@ main {
             .line {
                 height: 5px;
                 width: 160px;
-                background: url(../img/line-ltr.png) no-repeat center center /cover;
+                background: url(../img/line-ltr.min.png) no-repeat center center /cover;
             }
             div {
 

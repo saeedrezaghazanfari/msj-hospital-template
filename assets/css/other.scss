@@ -4,558 +4,88 @@
 
 // header and main tag are here !!
 
-// body.ltr_template {
+body.ltr_template {
+    direction: ltr !important;
+    text-align: left;
 
-// }
-
-header {
-
-    .header__slider {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: -1;
-
-        .header__image {
-            background-size: cover; 
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 100vh;
-            width: 100%;
-        }
+    .corner__image--top {
+        left: -137px;
+        right: unset !important;
     }
-
-    .header__elements {
-        background-color: rgba($color: $dark, $alpha: 0.3);
-        box-shadow: inset 0px 0px 110px 42px rgba($dark ,1);
-        height: 100vh;
-        width: 100%;
-
-        .container {
-            max-width: 1500px;
-            margin: auto;
-            padding: 20px 20px 0 20px;
-            position: relative;
-
-            section.top_of_menu {
-                color: white;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                border-bottom: 2px solid white;    
-    
-                .website_logo {
-                    min-width: 300px;
-
-                    a {
-                        display: flex;
-                        align-items: center;
-
-                        img {
-                            height: 70px;
-                            width: 70px;
-                        }
-                        span {
-                            color: white;
-                            font-size: $font-xlarge;
-                            margin: 0 10px;
-                        }
-                    }
-                }
-                .website_option {
-                    display: flex;
-                    align-items: center;
-                    position: relative;
-
-                    .chnage_lang_div {
-                        border: 2px solid white;
-                        cursor: pointer;
-                        border-radius: 25px;
-                        padding: 5px 16px;
-                        text-align: center;
-                        margin: 0 10px;
-
-                        i {
-                            padding-left: 10px;
-                        }
-                    }
-
-                    ul.chnage_lang_toggle {
-                        position: absolute;
-                        left: 72px;
-                        top: 58px;
-                        background-color: white;
-                        border-radius: 5px;
-                        list-style: none;
-                        padding: 10px;
-                        width: 68px;
-                        text-align: left;
-                        z-index: 10;
-                        opacity: 0;
-                        visibility: none;
-                        transition: opacity .3s ease;
-
-                        &--show {
-                            opacity: 1;
-                            visibility: visible;
-                        }
-
-                        li {
-
-                            a {
-                                display: block;
-                                color: $gray;
-    
-                                &:hover { color: $pink; }
-                            }
-                        }
-                    }
-
-                    img.image_search {
-                        cursor: pointer;
-                        height: 49px;
-                        width: 59px;
-                    }
-                    form.search_bar {
-
-                        .form_wrapper {
-                            display: none;
-                            position: relative;
-                            border-radius: 25px 0 0 25px;
-                            margin-right: 24px;
-
-                            input {
-                                border: 2px solid white;
-                                cursor: pointer;
-                                border-radius: 25px 0 0 25px;
-                                padding: 9px 16px;
-                                text-align: right;
-                                border-right: unset;
-                                background-color: white;
-                                color: $dark;
-                            }
-                            button {
-                                position: absolute;
-                                right: -23px;
-                                top: 0px;
-                                border: 2px solid white;
-                                cursor: pointer;
-                                border-radius: 0 25px 25px 0;
-                                padding: 9px 10px;
-                                padding-left: 0;
-                                text-align: right;
-                                border-left: unset;
-                                background-color: white;
-
-                                i {
-                                    color: $dark;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-    
-            nav {
-                margin-top: 20px;
-
-                .sidebar_toggle_div {
-                    display: none;
-
-                    button.sidebar_toggle_btn {
-                        background-color: transparent;
-                        color: white;
-                        padding: 5px 24px;
-
-                        i {
-                            font-size: $font-xlarge;
-                        }
-                    }
-                }
-                .sidebar_wrapper {
-                    display: none;
-
-                    .sidebar_glass {
-                        position: fixed;
-                        left: 0;
-                        right: 0;
-                        top: 0;
-                        bottom: 0;
-                        background-color: rgba($color: black, $alpha: .4);
-                        backdrop-filter: blur(4px);
-                        z-index: 101;
-
-                        ul.sidebar_megamenu {
-                            width: 230px;
-                            height: 100vh;
-                            overflow-y: auto;
-                            background-color: white;
-                            display: none;
-                            flex-direction: column;
-                            list-style-type: none;
-                            position: relative;
-                            transition: all .3s ease;
-                            transform: translateX(250px);
-
-                            li.close_div {
-                                text-align: left;
-                                padding: 0 10px;
-
-                                button {
-                                    color: $dark;
-                                    font-size: 28pt;
-                                    background-color: white;
-                                    padding: 0 10px;
-                                }
-                            }
-                            
-                            li.megamenu__item {
-                                margin-bottom: 7px;
-                
-                                & > a { // toggle of mega menu
-                                    color: $dark;
-                                    padding: 0 1rem;
-                                    background-color: transparent;
-                                    font-size: $font-small;
-                                    position: relative;
-
-                                    &.li_active {
-                                        color: $pink;
-                                    }
-                                    .fa-chevron-left {
-                                        font-size: 8px;
-                                        padding: 0 3px;
-                                        color: #c5c5c5;
-                                        transition: all .3s ease;
-                                    }
-                                    .chevron_active {
-                                        color: black;
-                                        transform: rotate(270deg);
-                                    }
-                                    &:hover {
-                                        .fa-chevron-left {
-                                            transform: translateX(-2px);
-                                        }
-                                    }
-                                }
-                                .px1 {
-                                    padding: 0 17px;
-                                }
-
-                                div.megamenu__menu {  // mega menu
-                                    border-radius: 5px;
-                                    padding: 7px;
-                                    display: flex;
-                                    flex-direction: column;
-                                    display: none;
-
-                                    .megamenu__menu_ul {
-                                        display: flex;
-                                        flex-direction: column;
-                                        height: 100%;
-                                        
-                                        .megamenu__wrapper {
-                                            flex: 1;
-                                            margin: 6px;
-                                            min-width: 190px;
-                                            max-width: 200px;
-                
-                                            & > div {
-                                                color: $dark;
-                                                font-size: $font-small;
-                                                font-weight: normal;
-                                                padding: 0px 17px 5px 0px;
-                                                margin: 0;
-        
-                                                a {
-                                                    transition: all .3s ease;
-                                                    display: block;
-                                                    color: $dark;
-                                                    padding: 0;
-
-                                                    .fa-chevron-left {
-                                                        font-size: 8px;
-                                                        padding: 0 3px;
-                                                        color: #c5c5c5;
-                                                        transition: all .3s ease;
-                                                    }
-                                                    .chevron_active {
-                                                        color: black;
-                                                        transform: rotate(270deg);
-                                                    }
-                                                }
-        
-                                                &:hover {
-                                                    a {color: $pink;}
-                                                    .fa-chevron-left {
-                                                        transform: translateX(-2px);
-                                                    }
-                                                }
-                                            }
-                                            ul {
-                                                padding: 0px 17px 5px 5px;
-                    
-                                                li {
-                                                    list-style-type: none;
-                                                    padding: 5px 0;
-                                                    border-bottom: 1px solid #f2f3f4;
-                    
-                                                    a {
-                                                        color: $dark;
-                                                        display: block;
-                                                        transition: all .3s ease;
-                                                        font-size: 10pt;
-        
-                                                        &:hover {
-                                                            color: $pink;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                            .px2 {
-                                                padding: 0 30px 0 0;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                }
-
-                ul.megamenu {
-                    display: flex;
-                    list-style-type: none;
-                    position: relative;
-
-                    li.bars_div {
-                        text-align: left;
-                        padding: 0 10px;
-                        display: none;
-
-                        a {
-                            color: $dark;
-                        }
-                        button {
-                            color: $dark;
-                            font-size: 14pt;
-                            background-color: white;
-                            padding: 0 20px;
-                        }
-                    }
-                    li.megamenu__item {
-        
-                        
-                        &:hover div.megamenu__menu {
-                            opacity: 1;
-                            visibility: visible;
-                            transform: translateY(0px) !important;
-                        }
-                        
-                        & > a { // toggle of mega menu
-                            color: white;
-                            padding: 1rem;
-                            background-color: transparent;
-                            font-size: $font-medium;
-                            position: relative;
-
-                            i {
-                                font-size: 9pt;
-                            }
-
-                            &.li_active {
-                                &::after {
-                                    content: '';
-                                    position: absolute;
-                                    bottom: 7px;
-                                    right: 9px;
-                                    left: -42px;
-                                    height: 2px;
-                                    width: 85%;
-                                    background-color: white;
-                                }
-                            }
-                        }
-                        
-                        div.megamenu__menu {  // mega menu
-                            position: absolute;
-                            top: 40px;
-                            border-radius: 5px;
-                            width: auto !important;
-                            background-color: white;
-                            z-index: 4;
-                            height: auto !important;
-                            padding: 7px;
-                            overflow: visible;
-                            transition: all 0.3s ease;
-                            display: flex;
-                            flex-direction: row;
-                            opacity: 0;
-                            visibility: hidden;
-                            transform: translateY(-7px);
-                            max-height: 80vh !important;
-                            overflow-y: auto !important;
-
-                            &::before {
-                                content: '';
-                                height: 0;
-                                width: 0;
-                                position: absolute;
-                                top: -9px;
-                                right: 22px;
-                                border-left: 10px solid rgba(0,0,0,0);
-                                border-right: 10px solid rgba(0,0,0,0);
-                                border-bottom: 10px solid white;
-                            }                    
-        
-                            .megamenu__menu_ul {
-                                display: flex;
-                                flex-direction: column;
-                                height: 100%;
-        
-                                .megamenu__wrapper {
-                                    flex: 1;
-                                    margin: 6px;
-                                    min-width: 190px;
-                                    max-width: 200px;
-
-                                    & > div {
-                                        color: $dark;
-                                        font-size: 14px;
-                                        font-weight: normal;
-                                        background: #f2f3f4;
-                                        padding: 5px 10px !important;
-                                        margin: 0;
-
-                                        a {
-                                            transition: all .3s ease;
-                                            display: block;
-                                        }
-
-                                        &:hover {
-                                            a {color: $pink;}
-                                        }
-                                    }
-                                    ul {
-                                        padding: 5px;
-            
-                                        li {
-                                            list-style-type: none;
-                                            padding: 5px 0;
-                                            border-bottom: 1px solid #f2f3f4;
-            
-                                            a {
-                                                color: $dark;
-                                                display: block;
-                                                transition: all .3s ease;
-                                                
-                                                .fa-chevron-left {
-                                                    font-size: 8px;
-                                                    padding: 0 3px;
-                                                    color: #c5c5c5;
-                                                    transition: all .3s ease;
-                                                }
-
-                                                &:hover {
-                                                    color: $pink;
-
-                                                    .fa-chevron-left {
-                                                        transform: translateX(-2px);
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            section.contact_ways {
-                position: absolute;
-                left: 0px;
-                top: 200px;
-
-                div {
-                    position: relative;
-                    
-                    p {
-                        position: absolute;
-                        left: 0;
-                        // top: is set after this property
-
-                        a {
-                            color: white;
-                            font-size: $font-xlarge;
-                            padding: 15px 0;
-                        }
-                    }
-                }
-                .text-pink { color: #ffa2ff; }
-                div:nth-child(1) p { top: 0px; transform: rotate(-90deg) translate(0px, 26px); }
-                div:nth-child(2) p { top: 130px; transform: rotate(-90deg) translate(0px, 5px);}
-                div:nth-child(3) p { top: 260px; transform: rotate(-90deg) translate(0px, 28px);}
-                div:nth-child(4) p { top: 370px; transform: rotate(-90deg) translate(0px, 27px);}
-            }
-
-            section.center_buttons {
-                position: absolute;
-                left: 225px;
-                top: 285px;
-                text-align: center;
-
-                img {
-                    height: 140px;
-                    width: 140px;
-                    border-radius: 6px;
-                }
-
-                div.button_wrapper {
-                    background-color: $dark;
-                    margin-bottom: 5px;
-                    text-align: center;
-                    border-radius: 10px;
-
-                    a {
-                        color: white;
-                        padding: 4px 8px;
-                        display: block;
-                        font-size: 12pt;
-                    }
-                }
-            }
-        }
+    .corner__image--bottom {
+        right: 137px;
+        left: unset !important;
     }
-
-    .bottom_tringle {
-        background-color: white;
-        height: 65px;
-        margin-top: -64px;
-        width: 100%;
-        clip-path: polygon(0 0, 70% 0, 75% 65px, 80% 0, 100% 0, 100% 65px, 0 65px); 
-    }
-
 }
 
 main {
-    position: relative;
-	
+
+    section.page_title {
+        margin-top: 4rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+
+        .line {
+            height: 3px;
+            width: 20%;
+            background-color: $gray;
+            border-radius: 25px;
+        }
+        .text {
+            font-size: $font-large;
+            color: $dark;
+            margin: 0 10px;
+        }
+    }
 
     article {
+        max-width: 1100px;
+        margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 11rem;
         position: relative;
 
+        .corner__image--top {
+            position: absolute;
+            z-index: -10;
+            background-color: rgba($color: $pink, $alpha: .4);
+            border-radius: 58% 42% 39% 61% / 57% 38% 62% 43%;
+            top: -5rem;
+            right: -137px;
+            height: 411px;
+            width: 442px;
+            animation: rotation-h 35s linear infinite;
+        }
+        .corner__image--bottom {
+            position: absolute;
+            z-index: -10;
+            background-color: rgba($color: $pink, $alpha: .4);
+            border-radius: 58% 42% 39% 61% / 57% 38% 62% 43%;
+            bottom: -5rem;
+            left: 137px;
+            height: 261px;
+            width: 232px;
+            animation: rotation-ah 35s linear infinite;
+        }
 
+        section.container {
+            box-shadow: $shadow;
+            padding: 2rem 3rem;
+            margin: 1rem;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, .6);
+            color: $dark;
+            backdrop-filter: blur(4px);
+            min-height: 500px;
+        }
     }
 
 }
 
 
 // --- css media queries --- //
-
 
 // 1200 < x < 1600
 @media (min-width: 1200px) and (max-width: 1600px) {
@@ -569,8 +99,17 @@ main {
 }
 
 
+// x < 700
+@media (max-width: 700px) {
+    .corner__image--top {
+        height: 311px !important;
+        width: 342px !important;
+    }
+}
+
+
 
 // x < 400
 @media (max-width: 400px) {
-    
+
 }
