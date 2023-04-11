@@ -183,7 +183,7 @@ section#megamenu__navbar {
         }
     }
     .wrapper {
-        max-width: 1105px;
+        max-width: 1500px;
         margin: auto;
         display: flex;
         flex-direction: row;
@@ -201,6 +201,9 @@ section#megamenu__navbar {
                 padding: 1rem;
                 background-color: transparent;
                 font-size: $font-medium;
+                i {
+                    font-size: 9pt;
+                }
             }
     
             div.megamenu__menu {  // mega menu
@@ -219,7 +222,7 @@ section#megamenu__navbar {
                 opacity: 0;
                 visibility: hidden;
                 transform: translateY(-7px);
-                max-height: 450px !important;
+                max-height: 80vh !important;
                 overflow-y: auto !important;
     
                 &::before {

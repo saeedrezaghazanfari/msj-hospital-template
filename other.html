@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="assets/img/logo-light.min.png">
+    <link rel="icon" href="assets/img/logo-light.png">
 	<meta name="theme-color" content="#434D59">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -19,14 +19,14 @@
     <!-- External files2 -->
     <link rel="stylesheet" href="assets/css/configure.css">
     <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/other.css">
     <link rel="stylesheet" href="assets/lib/animate.css">
     <link rel="stylesheet" href="assets/lib/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/lib/owl.theme.default.min.css">
 
 </head>
 
-<body class="ltr_templatee">
+<body class="ltr_template">
 
     <!-- preloading page -->
     <section id="preloading">
@@ -79,7 +79,7 @@
             </li>
             
             <li class="megamenu__item" role="menuitem">
-                <a href="#">درباره ما <i class="fa fa-chevron-down"></i></a>
+                <a href="#">درباره ما</a>
                 <div class="megamenu__menu" aria-hidden="true" role="menu">
                     <div class="megamenu__menu_ul">
                         <div class="megamenu__wrapper">
@@ -118,7 +118,7 @@
             </li>
     
             <li class="megamenu__item" role="menuitem">
-                <a href="#">راهنمای بیمار <i class="fa fa-chevron-down"></i></a>
+                <a href="#">راهنمای بیمار</a>
                 <div class="megamenu__menu" aria-hidden="true" role="menu">
                     <div class="megamenu__menu_ul">
                         <div class="megamenu__wrapper">
@@ -137,7 +137,7 @@
             </li>
     
             <li class="megamenu__item" role="menuitem">
-                <a href="#">خدمات و امکانات <i class="fa fa-chevron-down"></i></a>
+                <a href="#">خدمات و امکانات</a>
                 <div class="megamenu__menu" aria-hidden="true" role="menu">
                     <div class="megamenu__menu_ul">
                         <div class="megamenu__wrapper">
@@ -161,7 +161,8 @@
                                 <li role="menuitem"><a href="#"><i class="fa fa-chevron-left"></i> Item 4</a></li>
                                 <li role="menuitem"><a href="#"><i class="fa fa-chevron-left"></i> Item 5</a></li>
                                 <li role="menuitem"><a href="#"><i class="fa fa-chevron-left"></i> Item 6</a></li>
-                                <li role="menuitem"><a href="#"><i class="fa fa-chevron-left"></i> Item 7</a></li>                                
+                                <li role="menuitem"><a href="#"><i class="fa fa-chevron-left"></i> Item 7</a></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -192,7 +193,7 @@
             </li>
     
             <li class="megamenu__item" role="menuitem">
-                <a href="#">خدمات الکترونیکی <i class="fa fa-chevron-down"></i></a>
+                <a href="#">خدمات الکترونیکی</a>
                 <div class="megamenu__menu" aria-hidden="true" role="menu">
                     <div class="megamenu__menu_ul">
                         <div class="megamenu__wrapper">
@@ -207,7 +208,7 @@
             </li>
     
             <li class="megamenu__item" role="menuitem">
-                <a href="#">گردشگری سلامت <i class="fa fa-chevron-down"></i></a>
+                <a href="#">گردشگری سلامت</a>
                 <div class="megamenu__menu" aria-hidden="true" role="menu">
                     <div class="megamenu__menu_ul">
                         <div class="megamenu__wrapper">
@@ -229,7 +230,7 @@
             </li>
               
             <li class="megamenu__item" role="menuitem">
-                <a href="#">تماس <i class="fa fa-chevron-down"></i></a>
+                <a href="#">تماس</a>
                 <div class="megamenu__menu" aria-hidden="true" role="menu">
                     <div class="megamenu__menu_ul">
                         <div class="megamenu__wrapper">
@@ -258,13 +259,37 @@
 
     </section>
 
+    .fa-chevron-left {
+        transform: rotate(180deg) !important;
+    }
+    .chevron_active {
+        color: black;
+        transform: rotate(275deg) !important;
+    }
+    header .header__elements .container section.top_of_menu .website_option ul.chnage_lang_toggle {
+        right: 72px !important;
+        left: unset;
+    }
+    header .header__elements .container section.contact_ways {
+        right: 120px !important;
+        left: unset !important;
+    }
+    header .header__elements .container section.center_buttons {
+        right: 225px;
+        left: unset !important;
+    }
+    header .bottom_tringle {
+        clip-path: polygon(0 0, 20% 0, 25% 65px, 30% 0, 100% 0, 100% 65px, 0 65px) !important;
+    }
+    main .stethoscope_div {
+        right: 0;
     <!-- + header -->
     <header id="header">
 
         <section class="header__slider owl-carousel1 owl-carousel owl-theme owl-loaded owl-drag">
-            <div class="header__image item" style="background-image: url(assets/img/_test.min.png);"></div>
-            <div class="header__image item" style="background-image: url(assets/img/_doctor.min.png);"></div>
-            <div class="header__image item" style="background-image: url(assets/img/map.min.png);"></div>
+            <div class="header__image item" style="background-image: url(assets/img/_test.jpg);"></div>
+            <div class="header__image item" style="background-image: url(assets/img/_doctor.png);"></div>
+            <div class="header__image item" style="background-image: url(assets/img/map.png);"></div>
         </section>
 
         <section class="header__elements">
@@ -275,7 +300,7 @@
 
                     <div class="website_logo">
                         <a href="/">
-                            <img src="assets/img/logo-light.min.png" alt="website logo">
+                            <img src="assets/img/logo-light.png" alt="website logo">
                             <span class="animate__animated animate__fadeInUp wow" data-wow-delay="1.5s">بیمارستان تخصصی موسی بن جعفر(ع)</span>
                         </a>
                     </div>
@@ -295,7 +320,7 @@
                                 <button type="submit"><i class="fa fa-search"></i></button>
                             </div>
                         </form>
-                        <img class="image_search" src="assets/img/search.min.png" alt="search icon">
+                        <img class="image_search" src="assets/img/search.png" alt="search icon">
 
                     </div>
     
@@ -507,7 +532,7 @@
                         </li>
                         
                         <li class="megamenu__item" role="menuitem">
-                            <a href="#">درباره ما <i class="fa fa-chevron-down"></i></a>
+                            <a href="#">درباره ما</a>
                             <div class="megamenu__menu" aria-hidden="true" role="menu">
                                 <div class="megamenu__menu_ul">
                                     <div class="megamenu__wrapper">
@@ -546,7 +571,7 @@
                         </li>
         
                         <li class="megamenu__item" role="menuitem">
-                            <a href="#">راهنمای بیمار <i class="fa fa-chevron-down"></i></a>
+                            <a href="#">راهنمای بیمار</a>
                             <div class="megamenu__menu" aria-hidden="true" role="menu">
                                 <div class="megamenu__menu_ul">
                                     <div class="megamenu__wrapper">
@@ -565,7 +590,7 @@
                         </li>
 
                         <li class="megamenu__item" role="menuitem">
-                            <a href="#">خدمات و امکانات <i class="fa fa-chevron-down"></i></a>
+                            <a href="#">خدمات و امکانات</a>
                             <div class="megamenu__menu" aria-hidden="true" role="menu">
                                 <div class="megamenu__menu_ul">
                                     <div class="megamenu__wrapper">
@@ -620,7 +645,7 @@
                         </li>
 
                         <li class="megamenu__item" role="menuitem">
-                            <a href="#">خدمات الکترونیکی <i class="fa fa-chevron-down"></i></a>
+                            <a href="#">خدمات الکترونیکی</a>
                             <div class="megamenu__menu" aria-hidden="true" role="menu">
                                 <div class="megamenu__menu_ul">
                                     <div class="megamenu__wrapper">
@@ -635,7 +660,7 @@
                         </li>
 
                         <li class="megamenu__item" role="menuitem">
-                            <a href="#">گردشگری سلامت <i class="fa fa-chevron-down"></i></a>
+                            <a href="#">گردشگری سلامت</a>
                             <div class="megamenu__menu" aria-hidden="true" role="menu">
                                 <div class="megamenu__menu_ul">
                                     <div class="megamenu__wrapper">
@@ -657,7 +682,7 @@
                         </li>
                           
                         <li class="megamenu__item" role="menuitem">
-                            <a href="#">تماس <i class="fa fa-chevron-down"></i></a>
+                            <a href="#">تماس</a>
                             <div class="megamenu__menu" aria-hidden="true" role="menu">
                                 <div class="megamenu__menu_ul">
                                     <div class="megamenu__wrapper">
@@ -704,7 +729,7 @@
 
                 <section class="center_buttons">
                     <div>
-                        <img src="assets/img/network.min.png" alt="qrcode image">
+                        <img src="assets/img/network.png" alt="qrcode image">
                     </div>
                     <div class="button_wrapper"><a href="">پزشکان</a></div>
                     <div class="button_wrapper"><a href="">پرسنل</a></div>
@@ -741,7 +766,7 @@
             <div class="container_1">
 
                 <div class="search__box">
-                    <img src="assets/img/logo-dark.min.png" alt="">
+                    <img src="assets/img/logo-dark.png" alt="">
     
                     <form>
 
@@ -815,21 +840,21 @@
                             <div><i class="fa fa-chevron-right"></i></div>
                         </div>
 
-                        <div class="gallery_image gallery_image--next" style="background-image: url(assets/img/_doctor.min.png);">
+                        <div class="gallery_image gallery_image--next" style="background-image: url(assets/img/_doctor.png);">
                             <div class="gallery__info">
                                 <div class="skill">متخصص مغز و اعصاب</div>
                                 <div class="name">دکتر محسن سلامی</div>
                                 <div class="counter">4/9</div>
                             </div>
                         </div>
-                        <div class="gallery_image gallery_image--center" style="background-image: url(assets/img/_doctor.min.png);">
+                        <div class="gallery_image gallery_image--center" style="background-image: url(assets/img/_doctor.png);">
                             <div class="gallery__info">
                                 <div class="skill">متخصص مغز و اعصاب</div>
                                 <div class="name">دکتر محسن سلامی</div>
                                 <div class="counter">4/9</div>
                             </div>
                         </div>
-                        <div class="gallery_image gallery_image--prev" style="background-image: url(assets/img/_doctor.min.png);">
+                        <div class="gallery_image gallery_image--prev" style="background-image: url(assets/img/_doctor.png);">
                             <div class="gallery__info">
                                 <div class="skill">متخصص مغز و اعصاب</div>
                                 <div class="name">دکتر محسن سلامی</div>
@@ -862,22 +887,22 @@
 
                 <div class="three__elements">
 
-                    <div class="one_element animate__animated animate__fadeInRight wow" data-wow-delay=".3s">
-                        <img src="assets/img/hands.min.png" alt="">
+                    <div class="one_element">
+                        <img src="assets/img/hands.png" alt="">
                         <h1>کمک‌های مردمی</h1>
                         <h3>از خدمات بیمارستان ما</h3>
                         <p><a href="">جهت کسب اطلاعات بیشتر کلیک کنید.</a></p>
                     </div>
                     
-                    <div class="one_element animate__animated animate__fadeInUp wow" data-wow-delay=".5s">
-                        <img src="assets/img/network.min.png" alt="">
+                    <div class="one_element">
+                        <img src="assets/img/network.png" alt="">
                         <h1>نوبت‌دهی آنلاین</h1>
                         <h3>از خدمات بیمارستان ما</h3>
                         <p><a href="">جهت کسب اطلاعات بیشتر کلیک کنید.</a></p>
                     </div>
 
-                    <div class="one_element animate__animated animate__fadeInLeft wow" data-wow-delay=".3s">
-                        <img src="assets/img/graduation-cap.min.png" alt="">
+                    <div class="one_element">
+                        <img src="assets/img/graduation-cap.png" alt="">
                         <h1>آموزش</h1>
                         <h3>از خدمات بیمارستان ما</h3>
                         <p><a href="">جهت کسب اطلاعات بیشتر کلیک کنید.</a></p>
@@ -897,42 +922,42 @@
                     
                     <div class="gallery__item item">
                         <a href="">
-                            <img src="assets/img/graduation-cap.min.png" alt="">
+                            <img src="assets/img/graduation-cap.png" alt="">
                             <p>تصویربرداری</p>
                         </a>
                     </div>
 
                     <div class="gallery__item item">
                         <a href="">
-                            <img src="assets/img/graduation-cap.min.png" alt="">
+                            <img src="assets/img/graduation-cap.png" alt="">
                             <p>تصویربرداری</p>
                         </a>
                     </div>
 
                     <div class="gallery__item item">
                         <a href="">
-                            <img src="assets/img/graduation-cap.min.png" alt="">
+                            <img src="assets/img/graduation-cap.png" alt="">
                             <p>تصویربرداری</p>
                         </a>
                     </div>
 
                     <div class="gallery__item item">
                         <a href="">
-                            <img src="assets/img/graduation-cap.min.png" alt="">
+                            <img src="assets/img/graduation-cap.png" alt="">
                             <p>تصویربرداری</p>
                         </a>
                     </div>
 
                     <div class="gallery__item item">
                         <a href="">
-                            <img src="assets/img/graduation-cap.min.png" alt="">
+                            <img src="assets/img/graduation-cap.png" alt="">
                             <p>تصویربرداری</p>
                         </a>
                     </div>
 
                     <div class="gallery__item item">
                         <a href="">
-                            <img src="assets/img/graduation-cap.min.png" alt="">
+                            <img src="assets/img/graduation-cap.png" alt="">
                             <p>تصویربرداری</p>
                         </a>
                     </div>
@@ -950,7 +975,7 @@
                     <div class="gallery__blogs owl-carousel3 owl-carousel owl-theme owl-loaded owl-drag">
     
                         <div class="gallery__item item">
-                            <div class="blog__image" style="background-image: url(assets/img/hands.min.png);">
+                            <div class="blog__image" style="background-image: url(assets/img/hands.png);">
                                 <div class="blog__image__glass">
                                     <div class="blog__date">
                                         <div class="day">23</div>
@@ -970,7 +995,7 @@
                         </div>
     
                         <div class="gallery__item item">
-                            <div class="blog__image" style="background-image: url(assets/img/hands.min.png);">
+                            <div class="blog__image" style="background-image: url(assets/img/hands.png);">
                                 <div class="blog__image__glass">
                                     <div class="blog__date">
                                         <div class="day">23</div>
@@ -990,7 +1015,7 @@
                         </div>
     
                         <div class="gallery__item item">
-                            <div class="blog__image" style="background-image: url(assets/img/hands.min.png);">
+                            <div class="blog__image" style="background-image: url(assets/img/hands.png);">
                                 <div class="blog__image__glass">
                                     <div class="blog__date">
                                         <div class="day">23</div>
@@ -1010,7 +1035,7 @@
                         </div>
     
                         <div class="gallery__item item">
-                            <div class="blog__image" style="background-image: url(assets/img/hands.min.png);">
+                            <div class="blog__image" style="background-image: url(assets/img/hands.png);">
                                 <div class="blog__image__glass">
                                     <div class="blog__date">
                                         <div class="day">23</div>
@@ -1042,7 +1067,7 @@
                         <div><a href=""><i class="fas fa-map-marker"></i> مشاهده نقشه</a></div>
                     </div>
 
-                    <img src="assets/img/map.min.png" alt="">
+                    <img src="assets/img/map.png" alt="">
 
                 </div>
 
@@ -1051,31 +1076,31 @@
                     <div class="insurance__gallery owl-carousel4 owl-carousel owl-theme owl-loaded owl-drag">
 
                         <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.min.png" alt="">
+                            <img src="assets/img/graduation-cap.png" alt="">
                         </div>
                         <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.min.png" alt="">
+                            <img src="assets/img/graduation-cap.png" alt="">
                         </div>
                         <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.min.png" alt="">
+                            <img src="assets/img/graduation-cap.png" alt="">
                         </div>
                         <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.min.png" alt="">
+                            <img src="assets/img/graduation-cap.png" alt="">
                         </div>
                         <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.min.png" alt="">
+                            <img src="assets/img/graduation-cap.png" alt="">
                         </div>
                         <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.min.png" alt="">
+                            <img src="assets/img/graduation-cap.png" alt="">
                         </div>
                         <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.min.png" alt="">
+                            <img src="assets/img/graduation-cap.png" alt="">
                         </div>
                         <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.min.png" alt="">
+                            <img src="assets/img/graduation-cap.png" alt="">
                         </div>
                         <div class="insurance__item item">
-                            <img src="assets/img/graduation-cap.min.png" alt="">
+                            <img src="assets/img/graduation-cap.png" alt="">
                         </div>
 
                     </div>
@@ -1094,29 +1119,29 @@
     <footer>
         
         <div class="logo__wrapper">
-            <a href="#header"><img src="assets/img/logo-light.min.png" alt=""></a>
+            <a href="#header"><img src="assets/img/logo-light.png" alt=""></a>
         </div>
 
         <div class="elements">
 
             <div class="title">
-                <img src="assets/img/footer-hospital.min.png" alt="">
+                <img src="assets/img/footer-hospital.png" alt="">
             </div>
 
             <div class="links">
                 <ul>
-                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".1s"><a href=""><i class="fa fa-chevron-left"></i> راهنمای نوبت‌دهی آنلاین</a></li>
-                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".2s"><a href=""><i class="fa fa-chevron-left"></i> تلفن‌های داخلی</a></li>
-                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".3s"><a href=""><i class="fa fa-chevron-left"></i> آموزش همگانی</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> راهنمای نوبت‌دهی آنلاین</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> تلفن‌های داخلی</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> آموزش همگانی</a></li>
                 </ul>
                 <ul>
-                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".4s"><a href=""><i class="fa fa-chevron-left"></i> گالری</a></li>
-                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".5s"><a href=""><i class="fa fa-chevron-left"></i> پزشکان</a></li>
-                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".6s"><a href=""><i class="fa fa-chevron-left"></i> مجلات و نشریات</a></li>
-                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".7s"><a href=""><i class="fa fa-chevron-left"></i> رویدادها</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> گالری</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> پزشکان</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> مجلات و نشریات</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> رویدادها</a></li>
                     <br>
-                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".8s"><a href=""><i class="fa fa-chevron-left"></i> تماس باما</a></li>
-                    <li class="animate__animated animate__fadeIn wow" data-wow-delay=".9s"><a href=""><i class="fa fa-chevron-left"></i> آدرس ما</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> تماس باما</a></li>
+                    <li><a href=""><i class="fa fa-chevron-left"></i> آدرس ما</a></li>
                 </ul>
             </div>
 
@@ -1143,7 +1168,6 @@
 
     <script type="text/javascript" src="assets/lib/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/custom.js"></script>
-    <script type="text/javascript" src="assets/js/home.js"></script>
     <script type="text/javascript" src="assets/lib/wow.min.js"></script>
     <script type="text/javascript" src="assets/lib/owl.carousel.min.js"></script>
     <script> new WOW().init(); </script>
